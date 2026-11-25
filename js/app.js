@@ -26,7 +26,7 @@ function montarNav() {
   $('#nav').innerHTML = NAV.map((g) => `
     <div class="nav-grupo">
       ${g.grupo ? `<div class="nav-grupo-titulo">${g.grupo}</div>` : ''}
-      ${g.itens.map(([r, i, t]) => `<a class="nav-link" href="#/${r}" data-rota="${r}"><span class="nav-icone">${i}</span>${t}</a>`).join('')}
+      ${g.itens.map(([r, i, t]) => `<a class="nav-link" href="#${r}" data-rota="${r}"><span class="nav-icone">${i}</span>${t}</a>`).join('')}
     </div>`).join('');
 }
 
@@ -35,7 +35,9 @@ const mqEscuro = window.matchMedia('(prefers-color-scheme: dark)');
 function aplicarTema() {
   const html = document.documentElement;
   html.dataset.paleta = D.config.paleta === 'rosa' ? 'rosa' : 'lilas';
-  const escuro = D.config.modo === 'escuro' || (D.config.modo === 'auto' && mqEscuro.matches);
+  const temaHost = html.dataset.theme; // definido por alguns visualizadores (claro/escuro)
+  const autoEscuro = temaHost === 'dark' ? true : temaHost === 'light' ? false : mqEscuro.matches;
+  const escuro = D.config.modo === 'escuro' || (D.config.modo === 'auto' && autoEscuro);
   html.dataset.escuro = escuro ? '1' : '0';
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.content = escuro ? (html.dataset.paleta === 'rosa' ? '#211720' : '#1b1625') : (html.dataset.paleta === 'rosa' ? '#f3b6cd' : '#b39ae6');
@@ -45,14 +47,16 @@ mqEscuro.addEventListener?.('change', () => { if (D.config.modo === 'auto') apli
 /* ---------- Roteamento ---------- */
 let rotaAnterior = null;
 function renderizar() {
-  const partes = location.hash.replace(/^#\/?/, '').split('/');
+  // Rotas: #inicio, #metas, #area-saude (aceita também o formato antigo #/area/saude)
+  const bruto = location.hash.replace(/^#\/?/, '');
+  const partes = bruto.startsWith('area-') ? ['area', bruto.slice(5)] : bruto.split('/');
   const nome = VIEWS[partes[0]] ? partes[0] : 'inicio';
   const main = $('#main');
   try {
     main.innerHTML = VIEWS[nome](...partes.slice(1).map(decodeURIComponent));
   } catch (e) {
     console.error(e);
-    main.innerHTML = vazio('😵', 'Algo deu errado ao mostrar esta página.', '<a class="btn" href="#/inicio">Voltar ao início</a>');
+    main.innerHTML = vazio('😵', 'Algo deu errado ao mostrar esta página.', '<a class="btn" href="#inicio">Voltar ao início</a>');
   }
   const rotaNav = nome === 'area' ? 'areas' : nome;
   $$('.nav-link').forEach((a) => {
@@ -407,32 +411,66 @@ function exportar() {
   a.click();
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  toast('💾 Backup baixado!');
   renderizar();
+  mostrarBackupTexto();
+}
+
+// Alguns lugares (como o visualizador do Claude) bloqueiam downloads.
+// Por isso o backup também aparece como texto para copiar e guardar.
+function mostrarBackupTexto() {
+  const texto = JSON.stringify(D);
+  const f = abrirModal('💾 Seu backup', `
+    <p class="muted" style="margin-bottom:12px">Se o arquivo não baixou, copie o texto abaixo e guarde em um lugar seguro (um e-mail para você mesmo, uma nota, o Google Drive…). Para restaurar, use <strong>Importar backup → Colar texto</strong>.</p>
+    <textarea id="backup-texto" rows="8" readonly style="font-family:monospace;font-size:12px">${esc(texto)}</textarea>
+    <div class="form-acoes" style="margin-top:12px"><span class="espaco"></span>
+      <button type="button" class="btn" data-fechar>Fechar</button>
+      <button type="button" class="btn primario" id="copiar-backup">📋 Copiar</button>
+    </div>`);
+  f.querySelector('#copiar-backup').addEventListener('click', () => {
+    const ta = f.querySelector('#backup-texto');
+    const ok = () => toast('📋 Backup copiado!');
+    try {
+      navigator.clipboard.writeText(texto).then(ok).catch(() => { ta.select(); toast('Texto selecionado: use Copiar do seu aparelho'); });
+    } catch { ta.select(); toast('Texto selecionado: use Copiar do seu aparelho'); }
+  });
+}
+
+async function restaurarDe(textoJSON) {
+  try {
+    const dados = JSON.parse(textoJSON);
+    if (!dados || !Array.isArray(dados.areas) || !dados.config) throw new Error('formato');
+    if (!(await confirmar('Importar este backup vai <strong>substituir</strong> todos os dados atuais deste navegador.', { botao: 'Importar' }))) return false;
+    D = mesclarPadrao(dadosPadrao(), dados);
+    D.config.boasVindas = true;
+    salvar();
+    aplicarTema();
+    renderizar();
+    toast('✅ Backup importado!');
+    return true;
+  } catch (e) {
+    console.error(e);
+    toast('⚠️ Backup inválido. Use um backup exportado por este site.');
+    return false;
+  }
 }
 
 function importar() {
-  const input = $('#arquivo-import') || Object.assign(document.createElement('input'), { type: 'file', accept: '.json,application/json' });
-  input.value = '';
-  input.onchange = async () => {
-    const arq = input.files[0];
-    if (!arq) return;
-    try {
-      const dados = JSON.parse(await arq.text());
-      if (!dados || !Array.isArray(dados.areas) || !dados.config) throw new Error('formato');
-      if (!(await confirmar('Importar este backup vai <strong>substituir</strong> todos os dados atuais deste navegador.', { botao: 'Importar' }))) return;
-      D = mesclarPadrao(dadosPadrao(), dados);
-      D.config.boasVindas = true;
-      salvar();
-      aplicarTema();
-      renderizar();
-      toast('✅ Backup importado!');
-    } catch (e) {
-      console.error(e);
-      toast('⚠️ Arquivo inválido. Use um backup exportado por este site.');
-    }
-  };
-  input.click();
+  const f = abrirModal('⬆️ Importar backup', `
+    <p class="muted" style="margin-bottom:12px">Escolha o arquivo .json do backup ou cole o texto copiado.</p>
+    <div class="pilha" style="gap:12px">
+      <label class="campo"><span>Arquivo de backup</span><input type="file" id="imp-arquivo" accept=".json,application/json"></label>
+      <label class="campo"><span>Ou cole o texto aqui</span><textarea id="imp-texto" rows="5" style="font-family:monospace;font-size:12px"></textarea></label>
+    </div>
+    <div class="form-acoes" style="margin-top:12px"><span class="espaco"></span>
+      <button type="button" class="btn" data-fechar>Cancelar</button>
+      <button type="button" class="btn primario" id="imp-ok">Importar</button>
+    </div>`);
+  f.querySelector('#imp-ok').addEventListener('click', async () => {
+    const arq = f.querySelector('#imp-arquivo').files[0];
+    const texto = arq ? await arq.text() : f.querySelector('#imp-texto').value.trim();
+    if (!texto) { toast('Escolha um arquivo ou cole o texto do backup'); return; }
+    if (await restaurarDe(texto)) fecharModal(f);
+  });
 }
 
 /* ---------- Ações (cliques) ---------- */
@@ -447,7 +485,7 @@ const ACOES = {
     if (location.hash.includes('config')) renderizar();
   },
   estado: (ds) => { estado[ds.chave] = ds.valor; renderizar(); },
-  irTrimestres: () => { estado.metasAba = 'tri'; location.hash = '#/metas'; renderizar(); },
+  irTrimestres: () => { estado.metasAba = 'tri'; location.hash = '#metas'; renderizar(); },
 
   novaMeta: (ds) => abrirMeta(null, ds.area),
   editarMeta: (ds) => abrirMeta(achar(D.metas, ds.id)),
@@ -530,11 +568,10 @@ const ACOES = {
     D.config.boasVindas = true;
     salvar();
     aplicarTema();
-    location.hash = '#/inicio';
+    location.hash = '#inicio';
     renderizar();
     toast('Tudo limpo. Um novo começo 🌱');
   },
-  imprimir: () => window.print(),
 };
 
 function ajustarMeta(id, sinal) {
@@ -664,6 +701,6 @@ if (!D.config.boasVindas) {
   boasVindas();
 }
 
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+if ('serviceWorker' in navigator && location.protocol.startsWith('http') && !location.hostname.endsWith('claude.ai') && !location.hostname.endsWith('claudeusercontent.com')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }

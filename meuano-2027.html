@@ -1,0 +1,3041 @@
+<!doctype html>
+<html lang="pt-BR" data-paleta="lilas" data-escuro="0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meu Ano 2027</title>
+  <meta name="description" content="Organização pessoal para 2027: áreas da vida, metas, hábitos, feitos e muito mais.">
+  <meta name="theme-color" content="#b39ae6">
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* =========================================================
+   Meu Ano 2027 — estilos
+   Paletas: lilás (padrão) e rosa bebê, cada uma com modo escuro
+   ========================================================= */
+
+:root,
+html[data-paleta="lilas"] {
+  --bg: #f7f3fd;
+  --bg-2: #efe7fb;
+  --surface: #ffffff;
+  --surface-2: #f4eefc;
+  --surface-3: #e9dffa;
+  --primary: #9b7dd6;
+  --primary-strong: #6f4fb0;
+  --primary-soft: #ece3fb;
+  --on-primary: #ffffff;
+  --accent: #f0a3c3;
+  --accent-soft: #fde6ef;
+  --text: #362a4d;
+  --muted: #7c7096;
+  --border: #e6dcf6;
+  --ok: #4fa97a;
+  --perigo: #d9546f;
+  --sombra: 0 6px 24px rgba(120, 88, 186, 0.08), 0 1px 3px rgba(120, 88, 186, 0.08);
+  --sombra-forte: 0 18px 50px rgba(90, 60, 150, 0.22);
+  --hero: linear-gradient(135deg, #efe5fd 0%, #f8e7f3 60%, #fdf0f6 100%);
+  color-scheme: light;
+}
+
+html[data-paleta="rosa"] {
+  --bg: #fdf5f8;
+  --bg-2: #fbe8f0;
+  --surface: #ffffff;
+  --surface-2: #fdeff4;
+  --surface-3: #f9e0ea;
+  --primary: #e38aae;
+  --primary-strong: #b85582;
+  --primary-soft: #fce3ed;
+  --on-primary: #ffffff;
+  --accent: #bfa1ea;
+  --accent-soft: #efe6fb;
+  --text: #4a2c3c;
+  --muted: #92707f;
+  --border: #f4d8e4;
+  --sombra: 0 6px 24px rgba(200, 100, 145, 0.08), 0 1px 3px rgba(200, 100, 145, 0.08);
+  --sombra-forte: 0 18px 50px rgba(160, 70, 115, 0.2);
+  --hero: linear-gradient(135deg, #fde4ee 0%, #fbeaf3 55%, #efe7fc 100%);
+}
+
+html[data-escuro="1"] {
+  --bg: #1b1625;
+  --bg-2: #221b2f;
+  --surface: #251f33;
+  --surface-2: #2d263e;
+  --surface-3: #3a3150;
+  --primary: #b9a0ef;
+  --primary-strong: #d6c6fb;
+  --primary-soft: #3a2f56;
+  --on-primary: #1b1625;
+  --accent: #f0a9c8;
+  --accent-soft: #4a2c40;
+  --text: #f0eafb;
+  --muted: #aa9fc1;
+  --border: #3a3150;
+  --ok: #7fd3a6;
+  --perigo: #f08aa1;
+  --sombra: 0 6px 24px rgba(0, 0, 0, 0.3);
+  --sombra-forte: 0 18px 50px rgba(0, 0, 0, 0.5);
+  --hero: linear-gradient(135deg, #2e2548 0%, #352540 60%, #3a2538 100%);
+  color-scheme: dark;
+}
+
+html[data-escuro="1"][data-paleta="rosa"] {
+  --bg: #211720;
+  --bg-2: #2a1d28;
+  --surface: #2c202a;
+  --surface-2: #362833;
+  --surface-3: #463340;
+  --primary: #f2a5c4;
+  --primary-strong: #f9c6da;
+  --primary-soft: #4b2f40;
+  --on-primary: #211720;
+  --accent: #c8aef1;
+  --accent-soft: #3a2f56;
+  --text: #fbecf3;
+  --muted: #c19fb0;
+  --border: #463340;
+  --hero: linear-gradient(135deg, #43283a 0%, #3b2636 55%, #30264a 100%);
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body.com-modal { overflow: hidden; }
+h1, h2, h3, h4 {
+  font-family: 'Quicksand', 'Nunito', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.15rem; }
+h3 { font-size: 1.02rem; }
+p { margin: 0; }
+a { color: var(--primary-strong); }
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+.muted { color: var(--muted); }
+.pequeno { font-size: 0.85rem; }
+.centro { text-align: center; }
+.espaco { flex: 1; }
+.num { font-variant-numeric: tabular-nums; }
+::selection { background: var(--primary-soft); }
+
+/* ---------- Layout ---------- */
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 264px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 22px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+}
+.marca strong, .topbar-marca strong { color: var(--primary); }
+.marca-logo {
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 14px;
+  background: var(--hero);
+  font-size: 1.3rem;
+}
+.nav-grupo { margin-bottom: 10px; }
+.nav-grupo-titulo {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 6px 12px 4px;
+  font-weight: 700;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.nav-link:hover { background: var(--surface-2); }
+.nav-link.ativo { background: var(--primary-soft); color: var(--primary-strong); }
+.nav-icone { width: 22px; text-align: center; }
+.sidebar-rodape { margin-top: auto; }
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 36px 70px;
+  max-width: 1280px;
+  margin: 0 auto;
+  outline: none;
+}
+
+.topbar { display: none; }
+.sidebar-fundo { display: none; }
+
+@media (max-width: 900px) {
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 58px;
+    padding: 0 10px;
+    padding-top: env(safe-area-inset-top);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 30;
+  }
+  .topbar-marca { text-decoration: none; color: var(--text); font-family: 'Quicksand', sans-serif; font-size: 1.1rem; }
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 60;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    box-shadow: var(--sombra-forte);
+  }
+  .app.menu-aberto .sidebar { transform: none; }
+  .app.menu-aberto .sidebar-fundo {
+    display: block;
+    position: fixed; inset: 0;
+    background: rgba(30, 20, 50, 0.35);
+    z-index: 55;
+  }
+  .main { padding: 76px 16px 60px; }
+  h1 { font-size: 1.55rem; }
+}
+
+/* ---------- Cabeçalho de página ---------- */
+.pagina-topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.pagina-topo p { margin-top: 6px; }
+.acoes { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.voltar { display: inline-block; margin-bottom: 10px; text-decoration: none; font-weight: 700; }
+
+/* ---------- Cards e grids ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--sombra);
+  min-width: 0;
+}
+.card-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.card-topo h2 { display: flex; align-items: center; gap: 8px; }
+.secao { margin-top: 22px; }
+.secao-titulo { margin: 28px 0 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.grid-cards-p { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.pilha { display: flex; flex-direction: column; gap: 18px; }
+@media (max-width: 1050px) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .grid-2, .grid-3 { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--hero);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 280px; height: 280px;
+  right: -80px; top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 35%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.hero-texto { flex: 1 1 320px; position: relative; z-index: 1; }
+.hero-saudacao { color: var(--muted); font-weight: 700; margin-bottom: 4px; }
+.hero h1 { font-size: 2.3rem; }
+.destaque { color: var(--primary); }
+.palavra { margin-top: 10px; font-size: 1.05rem; }
+.palavra strong { color: var(--primary-strong); }
+blockquote {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  max-width: 620px;
+}
+.hero-ano { text-align: center; position: relative; z-index: 1; flex: 0 0 auto; margin: 0 auto; }
+.hero-ano p { margin-top: 10px; }
+
+.anel {
+  --p: 0;
+  --tam: 120px;
+  width: var(--tam); height: var(--tam);
+  border-radius: 50%;
+  background: conic-gradient(var(--primary) calc(var(--p) * 1%), var(--surface-3) 0);
+  display: grid; place-items: center;
+  margin: 0 auto;
+}
+.anel span {
+  width: calc(var(--tam) - 22px); height: calc(var(--tam) - 22px);
+  border-radius: 50%;
+  background: var(--surface);
+  display: grid; place-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.anel.mini { --tam: 64px; }
+.anel.mini span { font-size: 0.95rem; }
+
+/* ---------- Stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 18px 0; }
+.stats.cinco { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.stat-icone { font-size: 1.3rem; }
+.stat-valor { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.6rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stat-rotulo { color: var(--muted); font-size: 0.86rem; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.08s, background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+.btn:hover { background: var(--surface-2); }
+.btn:active { transform: scale(0.97); }
+.btn.primario { background: var(--primary); border-color: var(--primary); color: var(--on-primary); box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 35%, transparent); }
+.btn.primario:hover { background: var(--primary-strong); border-color: var(--primary-strong); }
+.btn.suave { background: var(--primary-soft); border-color: transparent; color: var(--primary-strong); }
+.btn.perigo { background: var(--perigo); border-color: var(--perigo); color: #fff; }
+.btn.perigo-texto { color: var(--perigo); border-color: transparent; background: transparent; }
+.btn.mini { padding: 5px 12px; font-size: 0.85rem; }
+.btn.largo { width: 100%; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  width: 38px; height: 38px;
+  border-radius: 12px;
+  display: inline-grid; place-items: center;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+.icon-btn:hover { background: var(--surface-2); color: var(--text); }
+.icon-btn.mini { width: 28px; height: 28px; font-size: 0.85rem; border-radius: 9px; }
+.link-btn { border: none; background: none; padding: 0; cursor: pointer; color: inherit; font-weight: 700; text-align: left; }
+.link-btn:hover { color: var(--primary-strong); }
+
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--primary) 55%, transparent); outline-offset: 2px; }
+
+/* ---------- Chips, tabs, filtros ---------- */
+.chip {
+  --cor: var(--primary-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--cor) 38%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--cor) 70%, transparent);
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.tab {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--muted);
+}
+.tab.ativo { background: var(--surface); color: var(--primary-strong); box-shadow: var(--sombra); }
+.filtros { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.filtro {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--muted);
+}
+.filtro.ativo { background: var(--primary-soft); color: var(--primary-strong); border-color: var(--primary); }
+
+/* ---------- Barras ---------- */
+.barra {
+  height: 10px;
+  background: var(--surface-3);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.barra > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.4s ease;
+}
+.barra.fina { height: 6px; }
+.barra.cor > span { background: color-mix(in srgb, var(--cor) 85%, var(--primary)); }
+.barra.excedeu > span { background: var(--perigo); }
+
+/* ---------- Listas com check ---------- */
+.lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lista > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  min-width: 0;
+}
+.lista > li.feito .check span { text-decoration: line-through; color: var(--muted); }
+.check { display: flex; align-items: center; gap: 10px; cursor: pointer; flex: 1; min-width: 0; }
+.check span { overflow-wrap: anywhere; }
+.check input, input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  border: 2px solid var(--primary);
+  background: var(--surface);
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  margin: 0;
+}
+input[type="checkbox"]:checked { background: var(--primary); }
+input[type="checkbox"]:checked::after { content: '✓'; color: var(--on-primary); font-size: 14px; font-weight: 800; line-height: 1; }
+
+.linha-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  min-width: 0;
+}
+.linha-item:last-child { border-bottom: none; }
+.linha-item .cresce { flex: 1; min-width: 0; }
+.linha-item .cresce > * + * { margin-top: 4px; }
+.truncar { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.inline-form { display: flex; gap: 8px; margin-top: 12px; }
+.inline-form input { flex: 1; min-width: 0; }
+
+.vazio {
+  text-align: center;
+  padding: 26px 16px;
+  color: var(--muted);
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+}
+.vazio-icone { font-size: 2rem; display: block; margin-bottom: 6px; }
+.vazio .btn { margin-top: 12px; }
+
+/* ---------- Formulários ---------- */
+input[type="text"], input[type="number"], input[type="date"], input[type="month"], input[type="email"], input:not([type]), select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  min-width: 0;
+}
+textarea { resize: vertical; min-height: 70px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.campo { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.campo > span { font-weight: 700; font-size: 0.88rem; }
+.campo small { color: var(--muted); }
+.campo.full, .form-acoes { grid-column: 1 / -1; }
+.campo.check-campo { flex-direction: row; align-items: center; gap: 10px; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: minmax(0, 1fr); } }
+.form-acoes { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+.foto-preview { max-height: 160px; border-radius: 12px; object-fit: cover; margin-top: 6px; }
+
+.escolha { display: flex; gap: 6px; flex-wrap: wrap; }
+.escolha label { cursor: pointer; }
+.escolha input { position: absolute; opacity: 0; pointer-events: none; }
+.escolha span {
+  display: inline-grid; place-items: center;
+  min-width: 44px; height: 44px;
+  padding: 0 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  font-size: 1.3rem;
+  transition: transform 0.1s;
+}
+.escolha input:checked + span { background: var(--primary-soft); border-color: var(--primary); transform: scale(1.06); }
+.escolha input:focus-visible + span { outline: 3px solid color-mix(in srgb, var(--primary) 55%, transparent); }
+.escolha.estrelas span { font-size: 1.1rem; color: var(--muted); }
+.estrelas-txt { color: #e7a93b; letter-spacing: 1px; }
+
+/* ---------- Modal ---------- */
+#modais:empty { display: none; }
+.modal-fundo {
+  position: fixed; inset: 0;
+  background: rgba(35, 22, 60, 0.42);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  z-index: 100;
+  animation: aparecer 0.15s ease;
+}
+.modal {
+  background: var(--surface);
+  border-radius: 24px;
+  width: min(620px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  box-shadow: var(--sombra-forte);
+  border: 1px solid var(--border);
+  animation: subir 0.2s ease;
+}
+.modal-topo {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px 6px;
+  position: sticky; top: 0;
+  background: var(--surface);
+  z-index: 1;
+}
+.modal-corpo { padding: 10px 20px 20px; }
+@keyframes aparecer { from { opacity: 0; } }
+@keyframes subir { from { transform: translateY(14px); opacity: 0; } }
+
+/* ---------- Toast ---------- */
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translate(-50%, 140%);
+  background: var(--text);
+  color: var(--bg);
+  padding: 12px 18px;
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: var(--sombra-forte);
+  z-index: 200;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
+  max-width: calc(100vw - 32px);
+  opacity: 0;
+  visibility: hidden;
+}
+#toast.visivel { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+#toast .btn { background: var(--primary); color: var(--on-primary); border: none; }
+
+/* ---------- Áreas ---------- */
+.area-card {
+  --cor: var(--primary-soft);
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.area-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: var(--cor);
+}
+.area-card:hover { transform: translateY(-3px); box-shadow: var(--sombra-forte); }
+.area-icone {
+  width: 48px; height: 48px;
+  border-radius: 16px;
+  display: grid; place-items: center;
+  font-size: 1.5rem;
+  background: color-mix(in srgb, var(--cor) 40%, var(--surface));
+}
+.area-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.nota-grande { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.7rem; }
+.nota-grande small { font-size: 0.85rem; color: var(--muted); }
+.area-cab { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
+.area-cab .area-icone { width: 64px; height: 64px; font-size: 2rem; border-radius: 20px; }
+
+.notas-grade { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.notas-grade label { display: flex; flex-direction: column; gap: 4px; align-items: center; font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: capitalize; }
+.notas-grade select { padding: 6px 2px; text-align: center; text-align-last: center; font-weight: 700; color: var(--text); }
+.notas-grade label.partida span { color: var(--primary-strong); }
+@media (max-width: 420px) { .notas-grade { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+.radar { width: 100%; max-width: 360px; height: auto; margin: 0 auto; display: block; overflow: visible; }
+.radar-anel { fill: none; stroke: var(--border); stroke-width: 1; }
+.radar-eixo { stroke: var(--border); stroke-width: 1; }
+.radar-serie { stroke-width: 2.5; stroke-linejoin: round; }
+.radar-serie.atual { fill: color-mix(in srgb, var(--primary) 28%, transparent); stroke: var(--primary); }
+.radar-serie.partida { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-dasharray: 5 4; }
+.radar-ponto.atual { fill: var(--primary); }
+.radar-ponto.partida { fill: var(--accent); }
+.radar-icone { font-size: 18px; }
+.radar-valor { font-size: 12px; font-weight: 800; fill: var(--muted); font-family: 'Nunito', sans-serif; }
+.legenda { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+.legenda i { display: inline-block; width: 14px; height: 4px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+
+.sparkline { width: 100%; height: 80px; overflow: visible; }
+.sparkline polyline { fill: none; stroke: var(--primary); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.sparkline circle { fill: var(--surface); stroke: var(--primary); stroke-width: 2; }
+.sparkline .linha-base { stroke: var(--border); stroke-dasharray: 3 4; }
+.sparkline text { font-size: 10px; fill: var(--muted); font-family: 'Nunito', sans-serif; }
+
+/* ---------- Metas ---------- */
+.meta { --cor: var(--primary-soft); display: flex; flex-direction: column; gap: 10px; }
+.meta.concluida { background: linear-gradient(160deg, color-mix(in srgb, var(--cor) 22%, var(--surface)), var(--surface)); }
+.meta-topo { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.meta-topo .chip { min-width: 0; }
+.meta h3 { font-size: 1.1rem; }
+.meta-prog { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--muted); font-weight: 700; gap: 8px; }
+.contador { display: flex; align-items: center; gap: 10px; justify-content: space-between; background: var(--surface-2); border-radius: 14px; padding: 6px; }
+.contador strong { font-variant-numeric: tabular-nums; text-align: center; flex: 1; }
+.contador .icon-btn { background: var(--surface); color: var(--primary-strong); font-weight: 800; font-size: 1.2rem; }
+.etapas { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.etapas li { font-size: 0.92rem; }
+.etapas li.feito span { text-decoration: line-through; color: var(--muted); }
+.selo { font-size: 0.75rem; font-weight: 800; padding: 3px 9px; border-radius: 999px; background: color-mix(in srgb, var(--ok) 20%, var(--surface)); color: var(--ok); white-space: nowrap; }
+
+.trimestres { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1100px) { .trimestres { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .trimestres { grid-template-columns: minmax(0, 1fr); } }
+.trimestre.atual { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft), var(--sombra); }
+.trimestre h2 small { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.obj-meta { font-size: 0.78rem; color: var(--muted); display: block; }
+
+/* ---------- Hábitos ---------- */
+.mes-nav { display: inline-flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+.mes-nav strong { min-width: 150px; text-align: center; font-family: 'Quicksand', sans-serif; }
+.rolagem-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.hab-tabela { border-collapse: separate; border-spacing: 3px; width: 100%; }
+.hab-tabela th { font-size: 0.68rem; color: var(--muted); font-weight: 700; text-align: center; line-height: 1.15; padding: 2px 0; }
+.hab-tabela th.fds { color: var(--accent); }
+.hab-tabela th.hoje-col { color: var(--primary-strong); }
+.hab-tabela .hab-nome { text-align: left; min-width: 190px; max-width: 230px; padding-right: 10px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+@media (max-width: 600px) { .hab-tabela .hab-nome { min-width: 140px; max-width: 160px; } }
+.hab-nome small { display: block; color: var(--muted); font-weight: 600; font-size: 0.76rem; }
+.hab-cel {
+  --cor: var(--primary);
+  width: 26px; height: 26px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+.hab-cel.on { background: color-mix(in srgb, var(--cor) 80%, var(--primary)); border-color: transparent; }
+.hab-cel.hoje { border-color: var(--primary); border-width: 2px; }
+.hab-cel:disabled { opacity: 0.35; cursor: default; }
+.hab-pct { font-weight: 800; font-size: 0.85rem; text-align: center; min-width: 44px; }
+.hab-hoje-btn {
+  --cor: var(--primary);
+  display: flex; align-items: center; gap: 10px;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+}
+.hab-hoje-btn .bolinha { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--primary); display: grid; place-items: center; flex-shrink: 0; font-size: 0.8rem; }
+.hab-hoje-btn.on { background: color-mix(in srgb, var(--cor) 30%, var(--surface)); }
+.hab-hoje-btn.on .bolinha { background: var(--primary); color: var(--on-primary); }
+.hab-hoje-btn .cresce { flex: 1; min-width: 0; }
+.hab-hoje-btn small { color: var(--muted); font-weight: 600; }
+
+/* ---------- Feitos (linha do tempo) ---------- */
+.timeline-mes { margin-top: 26px; }
+.timeline-mes > h2 { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.timeline-mes > h2 .chip { font-family: 'Nunito', sans-serif; }
+.feito-card { --cor: var(--primary-soft); padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.feito-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.feito-card .feito-corpo { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.feito-card .feito-data { font-size: 0.8rem; color: var(--muted); font-weight: 700; }
+.feito-card p { font-size: 0.92rem; overflow-wrap: anywhere; }
+.feito-card .feito-rodape { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
+
+/* ---------- Revisões ---------- */
+.rev-card dl { margin: 10px 0 0; display: grid; gap: 10px; }
+.rev-card dt { font-weight: 800; font-size: 0.82rem; color: var(--primary-strong); }
+.rev-card dd { margin: 2px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.notas-mini { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.dica { background: var(--accent-soft); border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; font-size: 0.93rem; }
+
+/* ---------- Gráficos de barras ---------- */
+.barras-v { display: flex; align-items: flex-end; gap: 6px; height: 180px; padding-top: 10px; }
+.barras-v .col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end; min-width: 0; }
+.barras-v .par { display: flex; gap: 2px; align-items: flex-end; height: 100%; width: 100%; justify-content: center; }
+.barras-v .b { width: 42%; max-width: 16px; border-radius: 6px 6px 2px 2px; min-height: 2px; }
+.barras-v .b.rec { background: var(--primary); }
+.barras-v .b.desp { background: var(--accent); }
+.barras-v .b.unica { width: 60%; max-width: 26px; background: var(--primary); }
+.barras-v small { font-size: 0.7rem; color: var(--muted); font-weight: 700; }
+.barras-v .col.ativo small { color: var(--primary-strong); }
+
+.barras-h { display: flex; flex-direction: column; gap: 12px; }
+.barras-h .linha { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; font-size: 0.9rem; }
+.barras-h .linha .barra { grid-column: 1 / -1; }
+
+/* ---------- Kanban (listas) ---------- */
+.kanban { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 860px) { .kanban { grid-template-columns: minmax(0, 1fr); } }
+.kanban-col { background: var(--surface-2); border-radius: 20px; padding: 14px; border: 1px solid var(--border); }
+.kanban-col h2 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 1rem; }
+.kanban-col h2 span { font-size: 0.8rem; background: var(--surface); border-radius: 999px; padding: 2px 10px; color: var(--muted); }
+.item-card { background: var(--surface); border-radius: 14px; padding: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.item-card h3 { font-size: 0.98rem; overflow-wrap: anywhere; }
+.item-card .linha-acoes { display: flex; gap: 6px; align-items: center; }
+.item-card select { padding: 5px 8px; font-size: 0.82rem; }
+
+/* ---------- Diário / heatmap ---------- */
+.heatmap { display: grid; grid-template-columns: 40px repeat(31, minmax(12px, 1fr)); gap: 3px; min-width: 520px; max-width: 900px; }
+.heatmap .mes-rotulo { font-size: 0.72rem; font-weight: 700; color: var(--muted); text-transform: capitalize; align-self: center; }
+.heatmap .dia { aspect-ratio: 1; border-radius: 4px; background: var(--surface-3); border: none; padding: 0; }
+.heatmap .dia.vazio-dia { background: transparent; }
+.dia.h1 { background: #b9a7d8; }
+.dia.h2 { background: #d4b5e8; }
+.dia.h3 { background: #f3d3a6; }
+.dia.h4 { background: #f7b0cb; }
+.dia.h5 { background: #e682ad; }
+.heatmap button.dia { cursor: pointer; }
+.diario-entrada { display: flex; gap: 14px; }
+.diario-humor { font-size: 2rem; line-height: 1; }
+.diario-entrada .cresce { flex: 1; min-width: 0; }
+.diario-entrada p { white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 6px; }
+.gratidao { margin-top: 8px; padding: 8px 12px; background: var(--accent-soft); border-radius: 12px; font-size: 0.92rem; }
+
+/* ---------- Retrospectiva ---------- */
+.retro-hero { text-align: center; padding: 40px 24px; }
+.retro-hero h1 { font-size: 2.6rem; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.galeria figure { margin: 0; border-radius: 14px; overflow: hidden; background: var(--surface-2); }
+.galeria img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.galeria figcaption { padding: 6px 10px; font-size: 0.8rem; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- Avisos ---------- */
+.aviso {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.aviso .espaco { min-width: 10px; }
+
+.paletas { display: flex; gap: 12px; flex-wrap: wrap; }
+.paleta-opcao { cursor: pointer; }
+.paleta-opcao input { position: absolute; opacity: 0; }
+.paleta-opcao span {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: var(--surface-2);
+  font-weight: 700;
+}
+.paleta-opcao i { width: 26px; height: 26px; border-radius: 50%; display: inline-block; }
+.paleta-opcao input:checked + span { border-color: var(--primary); background: var(--primary-soft); }
+.paleta-opcao input:focus-visible + span { outline: 3px solid color-mix(in srgb, var(--primary) 55%, transparent); }
+
+/* ---------- Impressão ---------- */
+@media print {
+  .sidebar, .topbar, .acoes, .btn, .icon-btn, #toast { display: none !important; }
+  .main { padding: 0; max-width: none; }
+  .card, .stat { box-shadow: none; break-inside: avoid; }
+  body { background: #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+</style>
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <button class="icon-btn" data-acao="menu" aria-label="Abrir menu">☰</button>
+      <a href="#inicio" class="topbar-marca">Meu Ano <strong>2027</strong></a>
+      <button class="icon-btn" data-acao="alternarModo" aria-label="Alternar modo claro/escuro">🌙</button>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <a href="#inicio" class="marca">
+        <span class="marca-logo">🌸</span>
+        <span>Meu Ano <strong>2027</strong></span>
+      </a>
+      <nav id="nav"></nav>
+      <div class="sidebar-rodape">
+        <button class="btn mini largo" data-acao="alternarModo">🌙 Claro / escuro</button>
+      </div>
+    </aside>
+    <div class="sidebar-fundo" data-acao="menu"></div>
+
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+
+  <div id="modais"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+/* =========================================================
+   Núcleo: constantes, utilidades, dados e armazenamento
+   ========================================================= */
+
+const ANO = 2027;
+const CHAVE = 'meuano2027:dados';
+const PARTIDA = `${ANO - 1}-12`; // nota de "ponto de partida" da roda da vida
+
+const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const MESES_C = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+const DIAS_C = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
+
+const AREAS_PADRAO = [
+  { id: 'saude', nome: 'Saúde e corpo', icone: '🌿', cor: '#9fd8b8' },
+  { id: 'mente', nome: 'Mente e emocional', icone: '🧠', cor: '#c4b0f0' },
+  { id: 'carreira', nome: 'Carreira e trabalho', icone: '💼', cor: '#a7c6ef' },
+  { id: 'financas', nome: 'Finanças', icone: '💰', cor: '#f0d88f' },
+  { id: 'relacoes', nome: 'Relacionamentos e família', icone: '💞', cor: '#f4adc8' },
+  { id: 'aprendizado', nome: 'Aprendizado', icone: '📚', cor: '#f5bf9f' },
+  { id: 'lazer', nome: 'Lazer e experiências', icone: '🎈', cor: '#98dada' },
+  { id: 'proposito', nome: 'Espiritualidade e propósito', icone: '✨', cor: '#dab0ee' },
+];
+
+const CATEGORIAS_DESPESA = ['Moradia', 'Alimentação', 'Transporte', 'Saúde', 'Educação', 'Lazer', 'Compras', 'Assinaturas', 'Investimentos', 'Doações', 'Outros'];
+const CATEGORIAS_RECEITA = ['Salário', 'Renda extra', 'Rendimentos', 'Presente', 'Outros'];
+
+const HUMORES = [
+  { v: 1, e: '😢', t: 'Muito difícil' },
+  { v: 2, e: '😕', t: 'Difícil' },
+  { v: 3, e: '😐', t: 'Ok' },
+  { v: 4, e: '🙂', t: 'Bom' },
+  { v: 5, e: '😄', t: 'Ótimo' },
+];
+
+/* ---------- Utilidades ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function uid() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+function dataISO(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+function hojeISO() { return dataISO(new Date()); }
+function lerISO(s) {
+  const [y, m, d] = String(s).split('-').map(Number);
+  return new Date(y, (m || 1) - 1, d || 1);
+}
+function fmtData(s, opts) {
+  if (!s) return '';
+  return lerISO(s)
+    .toLocaleDateString('pt-BR', opts || { day: '2-digit', month: 'short', year: 'numeric' })
+    .replace(/\./g, '');
+}
+function fmtDataLonga(s) {
+  return lerISO(s).toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+}
+function maiuscula(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+function fmtDinheiro(v) {
+  return Number(v || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+function fmtNum(v) {
+  return Number(v || 0).toLocaleString('pt-BR', { maximumFractionDigits: 2 });
+}
+function pct(a, b) {
+  a = Number(a) || 0; b = Number(b) || 0;
+  if (b <= 0) return 0;
+  return Math.max(0, Math.min(100, Math.round((a / b) * 100)));
+}
+function soma(lista, campo = 'valor') {
+  return lista.reduce((s, x) => s + (Number(x[campo]) || 0), 0);
+}
+function mesKey(m, ano = ANO) { return `${ano}-${String(m).padStart(2, '0')}`; }
+function diasNoMes(ano, mes0) { return new Date(ano, mes0 + 1, 0).getDate(); }
+function doAno(s) { return typeof s === 'string' && s.startsWith(String(ANO)); }
+function addDias(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
+function inicioSemana(d) {
+  const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); // segunda-feira
+  return x;
+}
+function semanaISO(d) {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const dia = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - dia);
+  const ini = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return { ano: t.getUTCFullYear(), semana: Math.ceil(((t - ini) / 864e5 + 1) / 7) };
+}
+function progressoAno() {
+  const agora = new Date();
+  const ini = new Date(ANO, 0, 1);
+  const fim = new Date(ANO + 1, 0, 1);
+  const total = Math.round((fim - ini) / 864e5);
+  if (agora < ini) return { antes: true, faltam: Math.ceil((ini - agora) / 864e5), pct: 0, total };
+  if (agora >= fim) return { depois: true, pct: 100, total };
+  const dia = Math.floor((agora - ini) / 864e5) + 1;
+  return { dia, total, pct: Math.round((dia / total) * 100), semana: semanaISO(agora).semana };
+}
+function trimestreAtual() {
+  const n = new Date();
+  return n.getFullYear() === ANO ? Math.floor(n.getMonth() / 3) + 1 : n.getFullYear() > ANO ? 4 : 1;
+}
+function mesAtualAno() {
+  const n = new Date();
+  return n.getFullYear() === ANO ? n.getMonth() + 1 : n.getFullYear() > ANO ? 12 : 1;
+}
+function saudacao() {
+  const h = new Date().getHours();
+  return h < 5 ? 'Boa noite' : h < 12 ? 'Bom dia' : h < 18 ? 'Boa tarde' : 'Boa noite';
+}
+
+/* ---------- Dados ---------- */
+function dadosPadrao() {
+  return {
+    versao: 1,
+    config: {
+      nome: '',
+      palavra: '',
+      visao: '',
+      paleta: 'lilas',
+      modo: 'auto',
+      metaLivros: 12,
+      boasVindas: false,
+      ultimoBackup: '',
+    },
+    areas: AREAS_PADRAO.map((a) => ({ ...a, visao: '', notas: {} })),
+    metas: [],
+    objetivos: [],
+    habitos: [],
+    feitos: [],
+    foco: [],
+    revisoes: { semanal: [], mensal: [], trimestral: [] },
+    financas: { lancamentos: [], limites: {}, caixinhas: [] },
+    listas: { livros: [], filmes: [], viagens: [] },
+    desejos: [],
+    diario: [],
+  };
+}
+
+function ehObjeto(v) { return v && typeof v === 'object' && !Array.isArray(v); }
+function mesclarPadrao(base, obj) {
+  if (!ehObjeto(obj)) return base;
+  for (const k of Object.keys(base)) {
+    if (obj[k] === undefined) obj[k] = base[k];
+    else if (ehObjeto(base[k]) && ehObjeto(obj[k]) && Object.keys(base[k]).length) mesclarPadrao(base[k], obj[k]);
+  }
+  return obj;
+}
+
+let D = null;
+
+function carregar() {
+  let dados = null;
+  try {
+    const bruto = localStorage.getItem(CHAVE);
+    if (bruto) dados = JSON.parse(bruto);
+  } catch (e) {
+    console.warn('Não foi possível ler os dados salvos', e);
+  }
+  D = mesclarPadrao(dadosPadrao(), dados || dadosPadrao());
+  if (!Array.isArray(D.areas) || !D.areas.length) D.areas = dadosPadrao().areas;
+  D.areas.forEach((a) => { a.notas = a.notas || {}; });
+}
+
+function salvar() {
+  try {
+    localStorage.setItem(CHAVE, JSON.stringify(D));
+    return true;
+  } catch (e) {
+    console.error(e);
+    if (typeof toast === 'function') toast('⚠️ Não foi possível salvar. O armazenamento pode estar cheio (fotos grandes?). Exporte um backup.');
+    return false;
+  }
+}
+
+/* ---------- Regras de negócio ---------- */
+function area(id) {
+  return D.areas.find((a) => a.id === id) || { id: '', nome: 'Geral', icone: '🌱', cor: '#d9cdef', notas: {} };
+}
+function notaAtual(a) {
+  const ks = Object.keys(a.notas || {}).filter((k) => Number(a.notas[k]) > 0).sort();
+  return ks.length ? Number(a.notas[ks[ks.length - 1]]) : 0;
+}
+function notaPartida(a) { return Number(a.notas?.[PARTIDA]) || 0; }
+
+function progressoMeta(m) {
+  if (m.tipo === 'numerica') return pct(m.atual, m.alvo);
+  if (m.tipo === 'etapas') {
+    const t = (m.etapas || []).length;
+    return t ? Math.round((m.etapas.filter((e) => e.feito).length / t) * 100) : 0;
+  }
+  return m.concluida ? 100 : 0;
+}
+function mediaProgresso(metas) {
+  return metas.length ? Math.round(metas.reduce((s, m) => s + progressoMeta(m), 0) / metas.length) : 0;
+}
+
+function sequenciaAtual(h) {
+  let d = new Date();
+  let n = 0;
+  if (!h.registros[dataISO(d)]) d = addDias(d, -1);
+  while (h.registros[dataISO(d)]) { n++; d = addDias(d, -1); }
+  return n;
+}
+function melhorSequencia(h, soAno = false) {
+  const dias = Object.keys(h.registros).filter((k) => h.registros[k] && (!soAno || doAno(k))).sort();
+  let melhor = 0, atual = 0, anterior = null;
+  for (const k of dias) {
+    const d = lerISO(k);
+    atual = anterior && Math.round((d - anterior) / 864e5) === 1 ? atual + 1 : 1;
+    melhor = Math.max(melhor, atual);
+    anterior = d;
+  }
+  return melhor;
+}
+function feitosNaSemana(h, ref = new Date()) {
+  const ini = inicioSemana(ref);
+  let n = 0;
+  for (let i = 0; i < 7; i++) if (h.registros[dataISO(addDias(ini, i))]) n++;
+  return n;
+}
+
+function comprimirImagem(arquivo, max = 1000, qualidade = 0.78) {
+  return new Promise((resolver, rejeitar) => {
+    const leitor = new FileReader();
+    leitor.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        const escala = Math.min(1, max / Math.max(img.width, img.height));
+        const c = document.createElement('canvas');
+        c.width = Math.round(img.width * escala);
+        c.height = Math.round(img.height * escala);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        resolver(c.toDataURL('image/jpeg', qualidade));
+      };
+      img.onerror = rejeitar;
+      img.src = leitor.result;
+    };
+    leitor.onerror = rejeitar;
+    leitor.readAsDataURL(arquivo);
+  });
+}
+
+/* ---------- Exemplos ---------- */
+function carregarExemplos() {
+  const h = hojeISO();
+  const meta = (o) => ({ id: uid(), criadoEm: h, descricao: '', prazo: '', unidade: '', atual: 0, alvo: 0, passo: 1, etapas: [], concluida: false, ...o });
+  const etapas = (lista) => lista.map((texto) => ({ id: uid(), texto, feito: false }));
+
+  const mLivros = meta({ titulo: 'Ler 24 livros', areaId: 'aprendizado', tipo: 'numerica', alvo: 24, unidade: 'livros', prazo: '2027-12-31', descricao: 'Trocar tempo de tela por leitura e aprender coisas novas.' });
+  const mCorrida = meta({ titulo: 'Correr uma prova de 10 km', areaId: 'saude', tipo: 'etapas', prazo: '2027-09-30', descricao: 'Ter mais disposição e cuidar do coração.', etapas: etapas(['Correr 3 km sem parar', 'Correr 5 km', 'Fazer a inscrição na prova', 'Correr 8 km nos treinos', 'Completar os 10 km 🏅']) });
+  const mReserva = meta({ titulo: 'Montar reserva de emergência', areaId: 'financas', tipo: 'numerica', alvo: 15000, unidade: 'R$', passo: 500, prazo: '2027-12-31', descricao: 'Ter tranquilidade para imprevistos.' });
+  const mTerapia = meta({ titulo: 'Manter a terapia o ano inteiro', areaId: 'mente', tipo: 'simples' });
+  const mCarreira = meta({ titulo: 'Conquistar uma nova certificação', areaId: 'carreira', tipo: 'etapas', prazo: '2027-10-31', etapas: etapas(['Conversar com a liderança sobre plano de carreira', 'Escolher a certificação', 'Estudar 3x por semana', 'Fazer a prova']) });
+  const mFamilia = meta({ titulo: 'Um encontro especial por mês com a família', areaId: 'relacoes', tipo: 'numerica', alvo: 12, unidade: 'encontros' });
+  const mViagem = meta({ titulo: 'Conhecer 2 lugares novos', areaId: 'lazer', tipo: 'numerica', alvo: 2, unidade: 'lugares' });
+  const mVolunt = meta({ titulo: 'Fazer trabalho voluntário 4 vezes', areaId: 'proposito', tipo: 'numerica', alvo: 4, unidade: 'vezes' });
+  D.metas = [mLivros, mCorrida, mReserva, mTerapia, mCarreira, mFamilia, mViagem, mVolunt];
+
+  const obj = (trimestre, titulo, m) => ({ id: uid(), trimestre, titulo, metaId: m ? m.id : '', areaId: m ? m.areaId : '', feito: false });
+  D.objetivos = [
+    obj(1, 'Ler 6 livros', mLivros),
+    obj(1, 'Correr 5 km sem parar', mCorrida),
+    obj(1, 'Guardar R$ 3.000', mReserva),
+    obj(1, 'Escolher a certificação', mCarreira),
+    obj(2, 'Ler mais 6 livros', mLivros),
+    obj(2, 'Inscrever na prova de 10 km', mCorrida),
+    obj(2, 'Primeira viagem nova', mViagem),
+    obj(3, 'Completar a prova de 10 km', mCorrida),
+    obj(3, 'Fazer a prova da certificação', mCarreira),
+    obj(4, 'Fechar a reserva de emergência', mReserva),
+    obj(4, 'Retrospectiva e planejamento de 2028', null),
+  ];
+
+  const hab = (nome, icone, areaId, metaSemanal) => ({ id: uid(), nome, icone, areaId, metaSemanal, registros: {} });
+  D.habitos = [
+    hab('Beber 2 L de água', '💧', 'saude', 7),
+    hab('Ler 20 minutos', '📖', 'aprendizado', 5),
+    hab('Meditar 10 minutos', '🧘', 'mente', 5),
+    hab('Exercício físico', '🏃', 'saude', 4),
+    hab('Anotar 3 gratidões', '🙏', 'proposito', 7),
+    hab('Registrar gastos', '🧾', 'financas', 7),
+  ];
+
+  const partida = { saude: 6, mente: 5, carreira: 7, financas: 5, relacoes: 8, aprendizado: 6, lazer: 4, proposito: 6 };
+  D.areas.forEach((a) => {
+    if (!a.notas[PARTIDA] && partida[a.id]) a.notas[PARTIDA] = partida[a.id];
+  });
+
+  D.desejos = [
+    { id: uid(), texto: 'Ver a aurora boreal', areaId: 'lazer', feito: false, dataFeito: '' },
+    { id: uid(), texto: 'Aprender a nadar bem', areaId: 'saude', feito: false, dataFeito: '' },
+    { id: uid(), texto: 'Fazer um curso de cerâmica', areaId: 'aprendizado', feito: false, dataFeito: '' },
+    { id: uid(), texto: 'Escrever cartas para pessoas importantes', areaId: 'relacoes', feito: false, dataFeito: '' },
+  ];
+
+  D.listas.livros = [
+    { id: uid(), titulo: 'Hábitos Atômicos', sub: 'James Clear', status: 'quero', nota: null, data: '', comentario: '' },
+    { id: uid(), titulo: 'Torto Arado', sub: 'Itamar Vieira Junior', status: 'quero', nota: null, data: '', comentario: '' },
+  ];
+  D.listas.viagens = [
+    { id: uid(), titulo: 'Chapada dos Veadeiros', sub: 'Natureza', status: 'quero', nota: null, data: '', comentario: '' },
+  ];
+
+  D.financas.caixinhas = [
+    { id: uid(), nome: 'Reserva de emergência', icone: '🛟', alvo: 15000, atual: 0, prazo: '2027-12-31' },
+    { id: uid(), nome: 'Viagem dos sonhos', icone: '✈️', alvo: 6000, atual: 0, prazo: '2027-07-01' },
+  ];
+  D.financas.limites = { Alimentação: 1200, Lazer: 400, Compras: 300, Assinaturas: 120 };
+
+  D.feitos = [
+    { id: uid(), titulo: 'Comecei a planejar o meu 2027 🎉', data: h, areaId: 'proposito', descricao: 'Primeiro passo: organizar áreas, metas e hábitos.', foto: '' },
+  ];
+
+  if (!D.config.palavra) D.config.palavra = 'Constância';
+  if (!D.config.visao) D.config.visao = 'Em 2027 eu cuido de mim com carinho, avanço um pouco todos os dias e celebro cada conquista.';
+}
+
+'use strict';
+/* =========================================================
+   Componentes de interface: toast, modais, formulários, gráficos
+   ========================================================= */
+
+/* ---------- Toast ---------- */
+function toast(msg, acao) {
+  const t = $('#toast');
+  t.innerHTML = `<span>${msg}</span>${acao ? `<button type="button" class="btn mini">${esc(acao.texto)}</button>` : ''}`;
+  if (acao) t.querySelector('button').onclick = () => { t.classList.remove('visivel'); acao.fn(); };
+  t.classList.add('visivel');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove('visivel'), acao ? 7000 : 2800);
+}
+
+/* ---------- Modais (empilháveis) ---------- */
+function abrirModal(titulo, corpoHTML) {
+  const fundo = document.createElement('div');
+  fundo.className = 'modal-fundo';
+  fundo.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true" aria-label="${esc(titulo.replace(/<[^>]+>/g, ''))}">
+      <header class="modal-topo">
+        <h2>${titulo}</h2>
+        <button type="button" class="icon-btn" data-fechar aria-label="Fechar">✕</button>
+      </header>
+      <div class="modal-corpo">${corpoHTML}</div>
+    </div>`;
+  fundo.addEventListener('mousedown', (e) => { fundo._clicouFora = e.target === fundo; });
+  fundo.addEventListener('click', (e) => {
+    if ((e.target === fundo && fundo._clicouFora) || e.target.closest('[data-fechar]')) fecharModal(fundo);
+  });
+  $('#modais').appendChild(fundo);
+  document.body.classList.add('com-modal');
+  setTimeout(() => {
+    const f = fundo.querySelector('input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=file]), textarea, select');
+    if (f && window.matchMedia('(min-width: 700px)').matches) f.focus();
+  }, 40);
+  return fundo;
+}
+function fecharModal(fundo) {
+  fundo = fundo || $('#modais').lastElementChild;
+  if (fundo) {
+    if (fundo._aoFechar) fundo._aoFechar();
+    fundo.remove();
+  }
+  if (!$('#modais').children.length) document.body.classList.remove('com-modal');
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && $('#modais').children.length) fecharModal();
+});
+
+function confirmar(msg, { botao = 'Confirmar', perigo = true, titulo = 'Tem certeza?' } = {}) {
+  return new Promise((resolver) => {
+    let respondido = false;
+    const f = abrirModal(titulo, `
+      <p>${msg}</p>
+      <div class="form-acoes" style="margin-top:18px">
+        <span class="espaco"></span>
+        <button type="button" class="btn" data-r="0">Cancelar</button>
+        <button type="button" class="btn ${perigo ? 'perigo' : 'primario'}" data-r="1">${botao}</button>
+      </div>`);
+    f._aoFechar = () => { if (!respondido) { respondido = true; resolver(false); } };
+    f.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-r]');
+      if (!b) return;
+      respondido = true;
+      resolver(b.dataset.r === '1');
+      fecharModal(f);
+    });
+  });
+}
+
+/* ---------- Formulários ---------- */
+function opcoesArea(opcional) {
+  const ops = D.areas.map((a) => ({ value: a.id, label: `${a.icone} ${a.nome}` }));
+  return opcional ? [{ value: '', label: '🌱 Geral' }, ...ops] : ops;
+}
+
+function campoHTML(c, valor) {
+  const v = valor ?? c.padrao ?? '';
+  const id = 'c_' + c.name;
+  const req = c.required ? 'required' : '';
+  const ph = c.placeholder ? `placeholder="${esc(c.placeholder)}"` : '';
+  let input;
+  switch (c.type) {
+    case 'textarea':
+      input = `<textarea id="${id}" name="${c.name}" rows="${c.rows || 3}" ${ph} ${req} maxlength="${c.maxlength || 4000}">${esc(v)}</textarea>`;
+      break;
+    case 'select':
+    case 'area': {
+      const ops = c.type === 'area' ? opcoesArea(c.opcional) : c.options;
+      input = `<select id="${id}" name="${c.name}" ${req}>${ops.map((o) => `<option value="${esc(o.value)}" ${String(o.value) === String(v) ? 'selected' : ''}>${esc(o.label)}</option>`).join('')}</select>`;
+      break;
+    }
+    case 'checkbox':
+      return `<label class="campo check-campo ${c.full ? 'full' : ''}" data-campo="${c.name}"><input type="checkbox" name="${c.name}" ${v ? 'checked' : ''}><span>${c.label}</span></label>`;
+    case 'humor':
+      input = `<div class="escolha" role="radiogroup">${HUMORES.map((h) => `<label title="${h.t}"><input type="radio" name="${c.name}" value="${h.v}" ${Number(v) === h.v ? 'checked' : ''}><span>${h.e}</span></label>`).join('')}</div>`;
+      break;
+    case 'estrelas':
+      input = `<div class="escolha estrelas" role="radiogroup">${[1, 2, 3, 4, 5].map((n) => `<label title="${n} estrela(s)"><input type="radio" name="${c.name}" value="${n}" ${Number(v) === n ? 'checked' : ''}><span>${'★'.repeat(n)}</span></label>`).join('')}</div>`;
+      break;
+    case 'imagem':
+      input = `
+        <input type="file" id="${id}" name="${c.name}" accept="image/*">
+        <input type="hidden" name="${c.name}_atual" value="${esc(v)}">
+        <img class="foto-preview" data-preview="${c.name}" src="${esc(v)}" alt="" ${v ? '' : 'hidden'}>
+        ${v ? `<label class="check" style="margin-top:6px"><input type="checkbox" name="${c.name}_remover"><span>Remover foto</span></label>` : ''}`;
+      break;
+    default:
+      input = `<input type="${c.type || 'text'}" id="${id}" name="${c.name}" value="${esc(v)}" ${ph} ${req}
+        ${c.min !== undefined ? `min="${c.min}"` : ''} ${c.max !== undefined ? `max="${c.max}"` : ''}
+        ${c.step ? `step="${c.step}"` : ''} maxlength="${c.maxlength || 300}" ${c.type === 'number' ? 'inputmode="decimal"' : ''}>`;
+  }
+  return `<label class="campo ${c.full ? 'full' : ''}" data-campo="${c.name}" ${c.type === 'humor' || c.type === 'estrelas' ? 'role="group"' : ''}>
+    <span>${c.label}</span>${input}${c.dica ? `<small>${c.dica}</small>` : ''}</label>`;
+}
+
+async function coletar(form, campos) {
+  const out = {};
+  for (const c of campos) {
+    const el = form.elements[c.name];
+    if (c.type === 'checkbox') out[c.name] = !!(el && el.checked);
+    else if (c.type === 'number') out[c.name] = el.value === '' ? null : Number(el.value);
+    else if (c.type === 'humor' || c.type === 'estrelas') {
+      const r = form.querySelector(`input[name="${c.name}"]:checked`);
+      out[c.name] = r ? Number(r.value) : null;
+    } else if (c.type === 'imagem') {
+      const arquivo = el.files && el.files[0];
+      const remover = form.elements[c.name + '_remover'];
+      if (arquivo) {
+        try { out[c.name] = await comprimirImagem(arquivo); }
+        catch { toast('Não consegui ler essa imagem 😕'); out[c.name] = form.elements[c.name + '_atual'].value; }
+      } else if (remover && remover.checked) out[c.name] = '';
+      else out[c.name] = form.elements[c.name + '_atual'].value;
+    } else out[c.name] = (el.value || '').trim();
+  }
+  return out;
+}
+
+/**
+ * Abre um formulário em modal.
+ * campos: [{ name, label, type, required, full, options, mostrarSe:{campo, valores} }]
+ * aoSalvar(dados) -> retorne false para manter o modal aberto
+ */
+function formModal({ titulo, campos, valores = {}, aoSalvar, aoExcluir, botao = 'Salvar', intro = '' }) {
+  const corpo = `
+    ${intro ? `<p class="muted" style="margin-bottom:14px">${intro}</p>` : ''}
+    <form class="form-grid">
+      ${campos.map((c) => campoHTML(c, valores[c.name])).join('')}
+      <div class="form-acoes">
+        ${aoExcluir ? '<button type="button" class="btn perigo-texto" data-excluir>🗑 Excluir</button>' : ''}
+        <span class="espaco"></span>
+        <button type="button" class="btn" data-fechar>Cancelar</button>
+        <button type="submit" class="btn primario">${botao}</button>
+      </div>
+    </form>`;
+  const fundo = abrirModal(titulo, corpo);
+  const form = fundo.querySelector('form');
+
+  const atualizarVisiveis = () => {
+    campos.forEach((c) => {
+      if (!c.mostrarSe) return;
+      const el = form.querySelector(`[data-campo="${c.name}"]`);
+      const ctrl = form.elements[c.mostrarSe.campo];
+      const atual = ctrl && ctrl.type === 'checkbox' ? (ctrl.checked ? 'on' : '') : ctrl?.value;
+      el.hidden = !c.mostrarSe.valores.includes(atual);
+    });
+  };
+  form.addEventListener('change', (e) => {
+    atualizarVisiveis();
+    if (e.target.type === 'file' && e.target.files[0]) {
+      const prev = form.querySelector(`[data-preview="${e.target.name}"]`);
+      if (prev) { prev.src = URL.createObjectURL(e.target.files[0]); prev.hidden = false; }
+    }
+  });
+  atualizarVisiveis();
+
+  let enviando = false;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (enviando) return;
+    enviando = true;
+    try {
+      const dados = await coletar(form, campos);
+      if (aoSalvar(dados) === false) return;
+      salvar();
+      fecharModal(fundo);
+      renderizar();
+    } finally { enviando = false; }
+  });
+
+  if (aoExcluir) {
+    fundo.querySelector('[data-excluir]').addEventListener('click', async () => {
+      if (await confirmar('Esse item será excluído permanentemente.', { botao: 'Excluir' })) {
+        aoExcluir();
+        salvar();
+        fecharModal(fundo);
+        renderizar();
+        toast('Excluído');
+      }
+    });
+  }
+  return fundo;
+}
+
+/* ---------- Pequenos componentes ---------- */
+function barra(p, cor) {
+  return `<div class="barra ${cor ? 'cor' : ''}" ${cor ? `style="--cor:${cor}"` : ''} role="progressbar" aria-valuenow="${p}" aria-valuemin="0" aria-valuemax="100"><span style="width:${Math.max(0, Math.min(100, p))}%"></span></div>`;
+}
+function chipArea(a) {
+  return `<span class="chip" style="--cor:${a.cor}" title="${esc(a.nome)}">${a.icone} ${esc(a.nome)}</span>`;
+}
+function vazio(icone, texto, botao = '') {
+  return `<div class="vazio"><span class="vazio-icone">${icone}</span>${texto}${botao ? `<div>${botao}</div>` : ''}</div>`;
+}
+function estrelas(n) {
+  return n ? `<span class="estrelas-txt" aria-label="${n} de 5 estrelas">${'★'.repeat(n)}${'☆'.repeat(5 - n)}</span>` : '';
+}
+function stat(icone, valor, rotulo) {
+  return `<div class="stat"><span class="stat-icone">${icone}</span><span class="stat-valor">${valor}</span><span class="stat-rotulo">${rotulo}</span></div>`;
+}
+function abas(chave, itens) {
+  return `<div class="tabs" role="tablist">${itens.map(([v, rotulo]) => `<button type="button" role="tab" class="tab ${estado[chave] === v ? 'ativo' : ''}" aria-selected="${estado[chave] === v}" data-acao="estado" data-chave="${chave}" data-valor="${v}">${rotulo}</button>`).join('')}</div>`;
+}
+function filtrosArea(chave) {
+  const atual = estado[chave];
+  return `<div class="filtros">
+    <button type="button" class="filtro ${atual === 'todas' ? 'ativo' : ''}" data-acao="estado" data-chave="${chave}" data-valor="todas">Todas</button>
+    ${D.areas.map((a) => `<button type="button" class="filtro ${atual === a.id ? 'ativo' : ''}" data-acao="estado" data-chave="${chave}" data-valor="${a.id}">${a.icone} ${esc(a.nome)}</button>`).join('')}
+  </div>`;
+}
+
+/* ---------- Gráficos ---------- */
+function radarSVG(series, tam = 360) {
+  const as = D.areas;
+  const n = as.length;
+  const c = tam / 2;
+  const r = c - 62;
+  const ponto = (i, v) => {
+    const ang = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+    return [c + Math.cos(ang) * (r * v) / 10, c + Math.sin(ang) * (r * v) / 10];
+  };
+  let s = `<svg class="radar" viewBox="0 0 ${tam} ${tam}" role="img" aria-label="Roda da vida">`;
+  for (const k of [2, 4, 6, 8, 10]) {
+    s += `<polygon class="radar-anel" points="${as.map((_, i) => ponto(i, k).map((x) => x.toFixed(1)).join(',')).join(' ')}"/>`;
+  }
+  as.forEach((_, i) => {
+    const [x, y] = ponto(i, 10);
+    s += `<line class="radar-eixo" x1="${c}" y1="${c}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`;
+  });
+  series.forEach((se) => {
+    const vals = as.map((a) => se.valor(a) || 0);
+    if (!vals.some(Boolean)) return;
+    s += `<polygon class="radar-serie ${se.classe}" points="${vals.map((v, i) => ponto(i, v).map((x) => x.toFixed(1)).join(',')).join(' ')}"/>`;
+    vals.forEach((v, i) => {
+      if (!v) return;
+      const [x, y] = ponto(i, v);
+      s += `<circle class="radar-ponto ${se.classe}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"><title>${esc(as[i].nome)}: ${v}</title></circle>`;
+    });
+  });
+  const principal = series[series.length - 1];
+  as.forEach((a, i) => {
+    const [x, y] = ponto(i, 12.9);
+    const v = principal.valor(a);
+    s += `<g><title>${esc(a.nome)}</title><text x="${x.toFixed(1)}" y="${(y - 3).toFixed(1)}" text-anchor="middle" class="radar-icone">${a.icone}</text>
+      <text x="${x.toFixed(1)}" y="${(y + 14).toFixed(1)}" text-anchor="middle" class="radar-valor">${v || '–'}</text></g>`;
+  });
+  return s + '</svg>';
+}
+
+function legendaRadar() {
+  return `<div class="legenda"><span><i style="background:var(--accent)"></i>Ponto de partida</span><span><i style="background:var(--primary)"></i>Nota mais recente</span></div>`;
+}
+
+function sparkline(pontos, { max = 10 } = {}) {
+  // pontos: [{rotulo, valor}]
+  const w = 320, h = 80, pad = 12;
+  const passo = (w - pad * 2) / Math.max(1, pontos.length - 1);
+  const y = (v) => h - 16 - ((h - 26) * v) / max;
+  const validos = pontos.map((p, i) => ({ ...p, x: pad + i * passo })).filter((p) => p.valor);
+  let s = `<svg class="sparkline" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="Evolução das notas">`;
+  s += `<line class="linha-base" x1="${pad}" x2="${w - pad}" y1="${y(5)}" y2="${y(5)}"/>`;
+  if (validos.length > 1) s += `<polyline points="${validos.map((p) => `${p.x.toFixed(1)},${y(p.valor).toFixed(1)}`).join(' ')}"/>`;
+  validos.forEach((p) => { s += `<circle cx="${p.x.toFixed(1)}" cy="${y(p.valor).toFixed(1)}" r="3.5"><title>${p.rotulo}: ${p.valor}</title></circle>`; });
+  pontos.forEach((p, i) => { if (i % 2 === 0) s += `<text x="${(pad + i * passo).toFixed(1)}" y="${h - 2}" text-anchor="middle">${p.rotulo}</text>`; });
+  return s + '</svg>';
+}
+
+'use strict';
+/* =========================================================
+   Páginas principais
+   ========================================================= */
+
+const VIEWS = {};
+const estado = {
+  metasAba: 'ano',
+  metasFiltro: 'todas',
+  habMes: null,
+  revAba: 'semanal',
+  finMes: null,
+  listaAba: 'livros',
+  feitosFiltro: 'todas',
+  desejosFiltro: 'todas',
+};
+
+function cabecalho(titulo, sub, acoes = '') {
+  return `<header class="pagina-topo"><div><h1>${titulo}</h1>${sub ? `<p class="muted">${sub}</p>` : ''}</div>${acoes ? `<div class="acoes">${acoes}</div>` : ''}</header>`;
+}
+
+/* ================= Início ================= */
+VIEWS.inicio = () => {
+  const c = D.config;
+  const hoje = hojeISO();
+  const pa = progressoAno();
+  const metas = D.metas;
+  const concluidas = metas.filter((m) => progressoMeta(m) >= 100).length;
+  const tri = trimestreAtual();
+  const objsTri = D.objetivos.filter((o) => o.trimestre === tri);
+  const focoHoje = D.foco.filter((f) => f.data === hoje);
+  const ultimaSemanal = [...D.revisoes.semanal].sort((a, b) => b.data.localeCompare(a.data))[0];
+  const emAndamento = metas.filter((m) => progressoMeta(m) < 100).sort((a, b) => progressoMeta(b) - progressoMeta(a)).slice(0, 5);
+  const ultimosFeitos = [...D.feitos].sort((a, b) => b.data.localeCompare(a.data)).slice(0, 4);
+  const habFeitos = D.habitos.filter((h) => h.registros[hoje]).length;
+
+  const anoTexto = pa.antes
+    ? `Faltam <strong>${pa.faltam}</strong> ${pa.faltam === 1 ? 'dia' : 'dias'} para 2027 ✨`
+    : pa.depois ? '2027 concluído 🎉 Veja sua <a href="#retrospectiva">retrospectiva</a>'
+    : `Dia <strong>${pa.dia}</strong> de ${pa.total} · semana ${pa.semana}`;
+
+  const temDados = metas.length || D.feitos.length || D.habitos.length;
+  const diasSemBackup = c.ultimoBackup ? Math.floor((new Date() - lerISO(c.ultimoBackup)) / 864e5) : null;
+  const avisoBackup = temDados && (diasSemBackup === null || diasSemBackup > 30)
+    ? `<div class="aviso">💾 <span>${diasSemBackup === null ? 'Você ainda não fez nenhum backup.' : `Seu último backup foi há ${diasSemBackup} dias.`} Os dados ficam só neste navegador.</span><span class="espaco"></span><button class="btn mini primario" data-acao="exportar">Fazer backup agora</button></div>`
+    : '';
+
+  return `
+  ${avisoBackup}
+  <section class="hero card">
+    <div class="hero-texto">
+      <p class="hero-saudacao">${saudacao()}${c.nome ? `, ${esc(c.nome)}` : ''} 💜</p>
+      <h1>Meu Ano <span class="destaque">2027</span></h1>
+      ${c.palavra ? `<p class="palavra">Palavra do ano: <strong>${esc(c.palavra)}</strong></p>` : `<p class="palavra muted">Escolha sua palavra do ano em <a href="#config">Configurações</a>.</p>`}
+      ${c.visao ? `<blockquote>${esc(c.visao)}</blockquote>` : ''}
+    </div>
+    <div class="hero-ano">
+      <div class="anel" style="--p:${pa.pct}"><span>${pa.pct}%</span></div>
+      <p>${anoTexto}</p>
+    </div>
+  </section>
+
+  <section class="stats">
+    ${stat('🎯', `${concluidas}/${metas.length}`, 'metas concluídas')}
+    ${stat('📈', `${mediaProgresso(metas)}%`, 'progresso médio das metas')}
+    ${stat('🔁', `${habFeitos}/${D.habitos.length}`, 'hábitos feitos hoje')}
+    ${stat('🏆', D.feitos.filter((f) => doAno(f.data)).length, 'feitos em 2027')}
+  </section>
+
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-topo"><h2>☀️ Foco de hoje</h2><span class="muted pequeno">${maiuscula(fmtDataLonga(hoje))}</span></div>
+      ${focoHoje.length ? `<ul class="lista">${focoHoje.map((f) => `
+        <li class="${f.feito ? 'feito' : ''}">
+          <label class="check"><input type="checkbox" data-mudar="foco" data-id="${f.id}" ${f.feito ? 'checked' : ''}><span>${esc(f.texto)}</span></label>
+          <button type="button" class="icon-btn mini" data-acao="removerFoco" data-id="${f.id}" aria-label="Remover">✕</button>
+        </li>`).join('')}</ul>` : '<p class="muted">Quais são as 1 a 3 coisas mais importantes de hoje?</p>'}
+      <form class="inline-form" data-form="foco">
+        <input name="texto" placeholder="Adicionar prioridade do dia…" maxlength="140" required aria-label="Nova prioridade do dia">
+        <button class="btn primario" aria-label="Adicionar">+</button>
+      </form>
+      ${ultimaSemanal && ultimaSemanal.foco ? `<div class="dica" style="margin:16px 0 0"><strong>🎯 Foco da semana:</strong><br>${esc(ultimaSemanal.foco)}</div>` : ''}
+    </div>
+
+    <div class="card">
+      <div class="card-topo"><h2>🔁 Hábitos de hoje</h2><a href="#habitos" class="pequeno">ver todos</a></div>
+      ${D.habitos.length ? `<div class="pilha" style="gap:8px">${D.habitos.map((h) => botaoHabitoHoje(h, hoje)).join('')}</div>`
+        : vazio('🌱', 'Nenhum hábito ainda.', '<button class="btn suave mini" data-acao="novoHabito">Criar hábito</button>')}
+    </div>
+  </section>
+
+  <section class="grid-2 secao">
+    <div class="card centro">
+      <div class="card-topo"><h2>🌸 Roda da vida</h2><a href="#areas" class="pequeno">ver áreas</a></div>
+      ${D.areas.some((a) => notaAtual(a)) ? radarSVG([{ classe: 'partida', valor: notaPartida }, { classe: 'atual', valor: notaAtual }]) + legendaRadar()
+        : vazio('🎡', 'Dê uma nota de 1 a 10 para cada área da sua vida.', '<a class="btn suave mini" href="#areas">Avaliar áreas</a>')}
+    </div>
+    <div class="card">
+      <div class="card-topo"><h2>🎯 Metas em andamento</h2><a href="#metas" class="pequeno">ver metas</a></div>
+      ${emAndamento.length ? emAndamento.map((m) => {
+        const a = area(m.areaId), p = progressoMeta(m);
+        return `<div class="linha-item"><span class="area-icone" style="--cor:${a.cor};width:38px;height:38px;font-size:1.1rem;border-radius:12px">${a.icone}</span>
+          <div class="cresce"><div class="meta-prog"><strong class="truncar" style="color:var(--text)">${esc(m.titulo)}</strong><span>${p}%</span></div>${barra(p, a.cor)}</div></div>`;
+      }).join('') : vazio('🎯', metas.length ? 'Todas as metas concluídas! 🎉' : 'Nenhuma meta criada ainda.', metas.length ? '' : '<button class="btn suave mini" data-acao="novaMeta">Criar meta</button>')}
+    </div>
+  </section>
+
+  <section class="grid-2 secao">
+    <div class="card">
+      <div class="card-topo"><h2>🗓️ Objetivos do ${tri}º trimestre</h2><a href="#metas" data-acao="irTrimestres" class="pequeno">ver trimestres</a></div>
+      ${objsTri.length ? `<ul class="lista">${objsTri.map(itemObjetivo).join('')}</ul>`
+        : vazio('🗓️', 'Nada planejado para este trimestre.', `<button class="btn suave mini" data-acao="novoObjetivo" data-tri="${tri}">Adicionar objetivo</button>`)}
+    </div>
+    <div class="card">
+      <div class="card-topo"><h2>🏆 Últimos feitos</h2><button class="btn mini suave" data-acao="novoFeito">+ Registrar</button></div>
+      ${ultimosFeitos.length ? ultimosFeitos.map((f) => {
+        const a = area(f.areaId);
+        return `<div class="linha-item">
+          ${f.foto ? `<img src="${f.foto}" alt="" style="width:44px;height:44px;border-radius:12px;object-fit:cover">` : `<span class="area-icone" style="--cor:${a.cor};width:44px;height:44px;font-size:1.2rem;border-radius:12px">${a.icone}</span>`}
+          <div class="cresce"><button class="link-btn truncar" style="display:block;max-width:100%" data-acao="editarFeito" data-id="${f.id}">${esc(f.titulo)}</button><span class="muted pequeno">${fmtData(f.data)}</span></div></div>`;
+      }).join('') : vazio('🏆', 'Registre suas conquistas, grandes e pequenas.')}
+    </div>
+  </section>`;
+};
+
+function botaoHabitoHoje(h, hoje) {
+  const a = area(h.areaId);
+  const on = !!h.registros[hoje];
+  const seq = sequenciaAtual(h);
+  return `<button type="button" class="hab-hoje-btn ${on ? 'on' : ''}" style="--cor:${a.cor}" data-acao="toggleHabito" data-id="${h.id}" data-dia="${hoje}" aria-pressed="${on}">
+    <span class="bolinha">${on ? '✓' : ''}</span>
+    <span class="cresce"><span class="truncar" style="display:block">${esc(h.icone || '')} ${esc(h.nome)}</span>
+    <small>${seq ? `🔥 ${seq} ${seq === 1 ? 'dia' : 'dias'} seguidos` : 'Comece hoje!'} · ${feitosNaSemana(h)}/${h.metaSemanal || 7} na semana</small></span>
+  </button>`;
+}
+
+function itemObjetivo(o) {
+  const m = D.metas.find((x) => x.id === o.metaId);
+  return `<li class="${o.feito ? 'feito' : ''}">
+    <label class="check"><input type="checkbox" data-mudar="objetivo" data-id="${o.id}" ${o.feito ? 'checked' : ''}>
+      <span>${esc(o.titulo)}${m ? `<small class="obj-meta">↳ ${esc(m.titulo)}</small>` : ''}</span></label>
+    <button type="button" class="icon-btn mini" data-acao="editarObjetivo" data-id="${o.id}" aria-label="Editar objetivo">✎</button>
+  </li>`;
+}
+
+/* ================= Áreas ================= */
+VIEWS.areas = () => {
+  const ordenadas = [...D.areas].sort((a, b) => (notaAtual(a) || 99) - (notaAtual(b) || 99));
+  return `
+  ${cabecalho('🌸 Áreas da vida', 'As 8 dimensões que você quer cuidar em 2027. Dê notas de 1 a 10 todo mês e acompanhe a evolução.')}
+  <section class="grid-2">
+    <div class="card centro">
+      <h2 style="margin-bottom:10px">Roda da vida</h2>
+      ${radarSVG([{ classe: 'partida', valor: notaPartida }, { classe: 'atual', valor: notaAtual }])}
+      ${legendaRadar()}
+    </div>
+    <div class="card">
+      <h2 style="margin-bottom:6px">Onde focar</h2>
+      <p class="muted pequeno" style="margin-bottom:12px">Áreas com nota mais baixa aparecem primeiro: elas pedem mais carinho.</p>
+      <div class="barras-h">
+        ${ordenadas.map((a) => {
+          const n = notaAtual(a), p0 = notaPartida(a);
+          const dif = n && p0 && n !== p0 ? ` <span class="pequeno" style="color:${n > p0 ? 'var(--ok)' : 'var(--perigo)'}">${n > p0 ? '▲' : '▼'} ${Math.abs(n - p0)}</span>` : '';
+          return `<div class="linha"><a href="#area-${a.id}" style="color:var(--text);text-decoration:none;font-weight:700" class="truncar">${a.icone} ${esc(a.nome)}</a><span class="num"><strong>${n || '–'}</strong>/10${dif}</span>${barra(n * 10, a.cor)}</div>`;
+        }).join('')}
+      </div>
+    </div>
+  </section>
+  <h2 class="secao-titulo">Suas áreas</h2>
+  <section class="grid-cards">
+    ${D.areas.map((a) => {
+      const metas = D.metas.filter((m) => m.areaId === a.id);
+      const habitos = D.habitos.filter((h) => h.areaId === a.id).length;
+      const feitos = D.feitos.filter((f) => f.areaId === a.id).length;
+      const n = notaAtual(a);
+      return `<a class="card area-card" href="#area-${a.id}" style="--cor:${a.cor}">
+        <div class="area-topo"><span class="area-icone">${a.icone}</span><span class="nota-grande">${n || '–'}<small>/10</small></span></div>
+        <h3>${esc(a.nome)}</h3>
+        ${a.visao ? `<p class="muted pequeno" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${esc(a.visao)}</p>` : '<p class="muted pequeno">Toque para escrever sua visão para esta área.</p>'}
+        <div class="meta-prog"><span>${metas.length} metas · ${habitos} hábitos · ${feitos} feitos</span><span>${mediaProgresso(metas)}%</span></div>
+        ${barra(mediaProgresso(metas), a.cor)}
+      </a>`;
+    }).join('')}
+  </section>`;
+};
+
+VIEWS.area = (id) => {
+  const a = D.areas.find((x) => x.id === id);
+  if (!a) return vazio('🤔', 'Área não encontrada.', '<a class="btn" href="#areas">Voltar</a>');
+  const metas = D.metas.filter((m) => m.areaId === a.id);
+  const habitos = D.habitos.filter((h) => h.areaId === a.id);
+  const feitos = D.feitos.filter((f) => f.areaId === a.id).sort((x, y) => y.data.localeCompare(x.data));
+  const desejos = D.desejos.filter((d) => d.areaId === a.id);
+  const meses = [{ k: PARTIDA, l: 'Partida' }, ...MESES_C.map((m, i) => ({ k: mesKey(i + 1), l: m }))];
+  const hoje = hojeISO();
+
+  return `
+  <a href="#areas" class="voltar">← Áreas da vida</a>
+  <div class="area-cab" style="--cor:${a.cor}">
+    <span class="area-icone">${a.icone}</span>
+    <div style="flex:1;min-width:200px"><h1>${esc(a.nome)}</h1><p class="muted">Nota atual: <strong>${notaAtual(a) || '–'}</strong>/10 · ponto de partida: ${notaPartida(a) || '–'}</p></div>
+    <button class="btn" data-acao="editarArea" data-id="${a.id}">✎ Nome e ícone</button>
+  </div>
+
+  <section class="grid-2">
+    <div class="card">
+      <h2 style="margin-bottom:10px">💭 Minha visão para 2027</h2>
+      <textarea rows="5" data-mudar="visaoArea" data-id="${a.id}" placeholder="Como você quer que esta área esteja no fim de 2027? Escreva no presente, como se já fosse verdade." aria-label="Visão para a área">${esc(a.visao)}</textarea>
+      <p class="muted pequeno" style="margin-top:6px">Salva automaticamente ao sair do campo.</p>
+    </div>
+    <div class="card">
+      <h2 style="margin-bottom:10px">📊 Notas mês a mês</h2>
+      <div class="notas-grade">
+        ${meses.map((m) => `<label class="${m.k === PARTIDA ? 'partida' : ''}"><span>${m.l}</span>
+          <select data-mudar="notaArea" data-id="${a.id}" data-mes="${m.k}" aria-label="Nota de ${m.l}">
+            <option value="">–</option>${[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => `<option ${Number(a.notas[m.k]) === n ? 'selected' : ''}>${n}</option>`).join('')}
+          </select></label>`).join('')}
+      </div>
+      <div style="margin-top:14px">${sparkline(meses.map((m) => ({ rotulo: m.l === 'Partida' ? 'início' : m.l, valor: Number(a.notas[m.k]) || 0 })))}</div>
+    </div>
+  </section>
+
+  <div class="secao-titulo"><h2>🎯 Metas</h2><button class="btn mini suave" data-acao="novaMeta" data-area="${a.id}">+ Nova meta</button></div>
+  ${metas.length ? `<section class="grid-cards">${metas.map(cardMeta).join('')}</section>` : vazio('🎯', 'Nenhuma meta nesta área ainda.')}
+
+  <section class="grid-2 secao">
+    <div class="card">
+      <div class="card-topo"><h2>🔁 Hábitos</h2><button class="btn mini suave" data-acao="novoHabito" data-area="${a.id}">+ Hábito</button></div>
+      ${habitos.length ? `<div class="pilha" style="gap:8px">${habitos.map((h) => botaoHabitoHoje(h, hoje)).join('')}</div>` : '<p class="muted">Nenhum hábito ligado a esta área.</p>'}
+    </div>
+    <div class="card">
+      <div class="card-topo"><h2>🌈 Lista da vida</h2><button class="btn mini suave" data-acao="novoDesejo" data-area="${a.id}">+ Sonho</button></div>
+      ${desejos.length ? `<ul class="lista">${desejos.map(itemDesejo).join('')}</ul>` : '<p class="muted">Nenhum sonho desta área na lista.</p>'}
+    </div>
+  </section>
+
+  <div class="secao-titulo"><h2>🏆 Feitos</h2><button class="btn mini suave" data-acao="novoFeito" data-area="${a.id}">+ Registrar feito</button></div>
+  ${feitos.length ? `<section class="grid-cards">${feitos.map(cardFeito).join('')}</section>` : vazio('🏆', 'Nenhum feito registrado nesta área ainda.')}`;
+};
+
+/* ================= Metas ================= */
+function cardMeta(m) {
+  const p = progressoMeta(m);
+  const a = area(m.areaId);
+  const objs = D.objetivos.filter((o) => o.metaId === m.id);
+  let controle = '';
+  if (m.tipo === 'numerica') {
+    const fmt = m.unidade === 'R$' ? fmtDinheiro : fmtNum;
+    const u = m.unidade && m.unidade !== 'R$' ? ` ${esc(m.unidade)}` : '';
+    controle = `<div class="contador">
+      <button type="button" class="icon-btn" data-acao="metaMenos" data-id="${m.id}" aria-label="Diminuir">−</button>
+      <strong>${fmt(m.atual)} / ${fmt(m.alvo)}${u}</strong>
+      <button type="button" class="icon-btn" data-acao="metaMais" data-id="${m.id}" aria-label="Aumentar">+</button>
+    </div>`;
+  } else if (m.tipo === 'etapas') {
+    controle = `<ul class="etapas">${m.etapas.map((e) => `<li class="${e.feito ? 'feito' : ''}"><label class="check"><input type="checkbox" data-mudar="etapa" data-meta="${m.id}" data-etapa="${e.id}" ${e.feito ? 'checked' : ''}><span>${esc(e.texto)}</span></label></li>`).join('')}</ul>`;
+  } else {
+    controle = `<label class="check"><input type="checkbox" data-mudar="metaSimples" data-id="${m.id}" ${m.concluida ? 'checked' : ''}><span>Concluída</span></label>`;
+  }
+  return `<article class="card meta ${p >= 100 ? 'concluida' : ''}" style="--cor:${a.cor}">
+    <div class="meta-topo">${chipArea(a)}<button type="button" class="icon-btn mini" data-acao="editarMeta" data-id="${m.id}" aria-label="Editar meta">✎</button></div>
+    <h3>${esc(m.titulo)}</h3>
+    ${m.descricao ? `<p class="muted pequeno">${esc(m.descricao)}</p>` : ''}
+    <div class="meta-prog"><span>${p >= 100 ? '<span class="selo">✓ Concluída</span>' : `${p}% concluído`}</span><span>${m.prazo ? `até ${fmtData(m.prazo)}` : ''}</span></div>
+    ${barra(p, a.cor)}
+    ${controle}
+    ${objs.length ? `<p class="muted pequeno">🗓️ ${objs.filter((o) => o.feito).length}/${objs.length} objetivos trimestrais</p>` : ''}
+  </article>`;
+}
+
+VIEWS.metas = () => {
+  const aba = estado.metasAba;
+  let corpo = '';
+  if (aba === 'ano') {
+    const f = estado.metasFiltro;
+    const metas = D.metas.filter((m) => f === 'todas' || m.areaId === f);
+    const abertas = metas.filter((m) => progressoMeta(m) < 100);
+    const feitas = metas.filter((m) => progressoMeta(m) >= 100);
+    corpo = `
+      ${filtrosArea('metasFiltro')}
+      ${metas.length ? `
+        <section class="grid-cards">${abertas.map(cardMeta).join('')}</section>
+        ${feitas.length ? `<h2 class="secao-titulo">✅ Concluídas (${feitas.length})</h2><section class="grid-cards">${feitas.map(cardMeta).join('')}</section>` : ''}`
+      : vazio('🎯', 'Nenhuma meta aqui ainda. Que tal começar por uma meta para cada área?', '<button class="btn primario" data-acao="novaMeta">+ Criar meta</button>')}`;
+  } else {
+    const atual = trimestreAtual();
+    const nomes = ['', 'jan – mar', 'abr – jun', 'jul – set', 'out – dez'];
+    corpo = `
+      <div class="dica">💡 Quebre cada meta anual em objetivos menores por trimestre. Assim o ano fica com 4 “mini-anos” e é mais fácil ajustar a rota.</div>
+      <section class="trimestres">
+        ${[1, 2, 3, 4].map((t) => {
+          const objs = D.objetivos.filter((o) => o.trimestre === t);
+          const feitos = objs.filter((o) => o.feito).length;
+          return `<div class="card trimestre ${t === atual ? 'atual' : ''}">
+            <div class="card-topo"><h2>${t}º tri <small>${nomes[t]}</small></h2><span class="muted pequeno">${feitos}/${objs.length}</span></div>
+            ${barra(pct(feitos, objs.length))}
+            <ul class="lista" style="margin-top:12px">${objs.map(itemObjetivo).join('')}</ul>
+            <button class="btn mini suave largo" style="margin-top:12px" data-acao="novoObjetivo" data-tri="${t}">+ Objetivo</button>
+          </div>`;
+        }).join('')}
+      </section>`;
+  }
+  return `
+    ${cabecalho('🎯 Metas e objetivos', 'Metas para o ano, divididas em objetivos trimestrais.',
+      aba === 'ano' ? '<button class="btn primario" data-acao="novaMeta">+ Nova meta</button>' : '<button class="btn primario" data-acao="novoObjetivo">+ Novo objetivo</button>')}
+    ${abas('metasAba', [['ano', '📅 Metas do ano'], ['tri', '🗓️ Trimestres']])}
+    ${corpo}`;
+};
+
+/* ================= Hábitos ================= */
+VIEWS.habitos = () => {
+  const agora = new Date();
+  if (!estado.habMes) estado.habMes = { ano: agora.getFullYear(), mes: agora.getMonth() };
+  const { ano, mes } = estado.habMes;
+  const nd = diasNoMes(ano, mes);
+  const hoje = hojeISO();
+  const dias = Array.from({ length: nd }, (_, i) => {
+    const d = new Date(ano, mes, i + 1);
+    return { iso: dataISO(d), n: i + 1, dow: d.getDay() };
+  });
+  const decorridos = dias.filter((d) => d.iso <= hoje).length;
+
+  const tabela = D.habitos.length ? `
+    <div class="card"><div class="rolagem-x">
+      <table class="hab-tabela">
+        <thead><tr><th class="hab-nome">Hábito</th>
+          ${dias.map((d) => `<th class="${d.dow === 0 || d.dow === 6 ? 'fds' : ''} ${d.iso === hoje ? 'hoje-col' : ''}">${DIAS_C[d.dow]}<br>${d.n}</th>`).join('')}
+          <th>%</th></tr></thead>
+        <tbody>
+          ${D.habitos.map((h) => {
+            const a = area(h.areaId);
+            const feitosMes = dias.filter((d) => h.registros[d.iso]).length;
+            const seq = sequenciaAtual(h);
+            return `<tr>
+              <td class="hab-nome"><button class="link-btn" data-acao="editarHabito" data-id="${h.id}">${esc(h.icone || '')} ${esc(h.nome)}</button>
+                <small>${seq ? `🔥 ${seq}` : '·'} · ${feitosNaSemana(h)}/${h.metaSemanal || 7} na semana</small></td>
+              ${dias.map((d) => {
+                const on = !!h.registros[d.iso];
+                return `<td><button type="button" class="hab-cel ${on ? 'on' : ''} ${d.iso === hoje ? 'hoje' : ''}" style="--cor:${a.cor}" data-acao="toggleHabito" data-id="${h.id}" data-dia="${d.iso}" ${d.iso > hoje ? 'disabled' : ''} aria-pressed="${on}" aria-label="${esc(h.nome)} em ${d.n}/${mes + 1}"></button></td>`;
+              }).join('')}
+              <td class="hab-pct">${decorridos ? pct(feitosMes, decorridos) : 0}%</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div></div>` : vazio('🔁', 'Nenhum hábito ainda. Comece com 2 ou 3, pequenos e fáceis.', '<button class="btn primario" data-acao="novoHabito">+ Criar hábito</button>');
+
+  const resumo = D.habitos.length ? `
+    <h2 class="secao-titulo">📊 Resumo de ${ANO}</h2>
+    <section class="grid-cards-p">
+      ${D.habitos.map((h) => {
+        const a = area(h.areaId);
+        const totalAno = Object.keys(h.registros).filter((k) => h.registros[k] && doAno(k)).length;
+        return `<div class="card" style="--cor:${a.cor}">
+          <div class="meta-topo"><strong class="truncar">${esc(h.icone || '')} ${esc(h.nome)}</strong></div>
+          <p class="muted pequeno" style="margin-top:6px">${chipArea(a)}</p>
+          <div class="grid-2" style="gap:8px;margin-top:10px;grid-template-columns:1fr 1fr">
+            <div><div class="stat-valor" style="font-size:1.3rem">${totalAno}</div><div class="muted pequeno">dias em ${ANO}</div></div>
+            <div><div class="stat-valor" style="font-size:1.3rem">${melhorSequencia(h)}</div><div class="muted pequeno">melhor sequência</div></div>
+          </div>
+        </div>`;
+      }).join('')}
+    </section>` : '';
+
+  return `
+    ${cabecalho('🔁 Hábitos', 'Pequenas ações repetidas constroem o ano. Toque nos quadradinhos para marcar.', '<button class="btn primario" data-acao="novoHabito">+ Novo hábito</button>')}
+    <div class="secao-titulo" style="margin-top:0">
+      <div class="mes-nav">
+        <button class="icon-btn mini" data-acao="habMes" data-delta="-1" aria-label="Mês anterior">‹</button>
+        <strong>${MESES[mes]} ${ano}</strong>
+        <button class="icon-btn mini" data-acao="habMes" data-delta="1" aria-label="Próximo mês">›</button>
+      </div>
+      <button class="btn mini" data-acao="habMes" data-delta="0">Hoje</button>
+    </div>
+    ${tabela}
+    ${resumo}`;
+};
+
+/* ================= Feitos ================= */
+function cardFeito(f) {
+  const a = area(f.areaId);
+  return `<article class="card feito-card" style="--cor:${a.cor}">
+    ${f.foto ? `<img src="${f.foto}" alt="${esc(f.titulo)}" loading="lazy">` : ''}
+    <div class="feito-corpo">
+      <span class="feito-data">${fmtData(f.data, { day: '2-digit', month: 'long', year: 'numeric' })}</span>
+      <h3>${esc(f.titulo)}</h3>
+      ${f.descricao ? `<p>${esc(f.descricao)}</p>` : ''}
+      <div class="feito-rodape">${chipArea(a)}<button type="button" class="icon-btn mini" data-acao="editarFeito" data-id="${f.id}" aria-label="Editar feito">✎</button></div>
+    </div>
+  </article>`;
+}
+
+VIEWS.feitos = () => {
+  const f = estado.feitosFiltro;
+  const lista = D.feitos.filter((x) => f === 'todas' || x.areaId === f).sort((a, b) => b.data.localeCompare(a.data));
+  const grupos = {};
+  lista.forEach((x) => { const k = x.data.slice(0, 7); (grupos[k] = grupos[k] || []).push(x); });
+  const doAnoQtd = D.feitos.filter((x) => doAno(x.data)).length;
+
+  return `
+    ${cabecalho('🏆 Mural de feitos', `Tudo o que você conquistou, viveu e celebrou. ${doAnoQtd} ${doAnoQtd === 1 ? 'feito' : 'feitos'} em ${ANO} até agora.`, '<button class="btn primario" data-acao="novoFeito">+ Registrar feito</button>')}
+    ${filtrosArea('feitosFiltro')}
+    ${lista.length ? Object.keys(grupos).sort().reverse().map((k) => {
+      const [y, m] = k.split('-').map(Number);
+      return `<section class="timeline-mes"><h2>${MESES[m - 1]} ${y} <span class="chip">${grupos[k].length}</span></h2>
+        <div class="grid-cards">${grupos[k].map(cardFeito).join('')}</div></section>`;
+    }).join('') : vazio('🏆', 'Nenhum feito por aqui ainda. Vale tudo: terminar um livro, uma conversa difícil, um treino, uma viagem.', '<button class="btn primario" data-acao="novoFeito">+ Registrar o primeiro</button>')}`;
+};
+
+/* ================= Revisões ================= */
+const REVISOES = {
+  semanal: {
+    rotulo: 'Semanal', icone: '🗓️',
+    dica: '10 a 15 minutos no domingo para olhar a semana que passou e escolher o foco da próxima. O foco aparece na página inicial.',
+    campos: () => [
+      { name: 'data', label: 'Qualquer dia da semana', type: 'date', required: true, padrao: hojeISO() },
+      { name: 'energia', label: 'Energia da semana', type: 'humor' },
+      { name: 'bem', label: 'O que foi bem? 🌟', type: 'textarea', full: true },
+      { name: 'travou', label: 'O que travou ou me desafiou?', type: 'textarea', full: true },
+      { name: 'aprendi', label: 'O que aprendi?', type: 'textarea', full: true },
+      { name: 'foco', label: 'Foco da próxima semana 🎯', type: 'textarea', full: true, rows: 2 },
+    ],
+    titulo: (r) => {
+      const d = lerISO(r.data), ini = inicioSemana(d), fim = addDias(ini, 6);
+      return `Semana ${semanaISO(d).semana} · ${fmtData(dataISO(ini), { day: '2-digit', month: 'short' })} – ${fmtData(dataISO(fim), { day: '2-digit', month: 'short' })}`;
+    },
+    ordem: (r) => r.data,
+  },
+  mensal: {
+    rotulo: 'Mensal', icone: '🌙',
+    dica: 'No fim de cada mês: celebre, ajuste o que for preciso e dê nota para cada área. As notas atualizam a roda da vida automaticamente.',
+    campos: () => [
+      { name: 'mes', label: 'Mês', type: 'select', options: MESES.map((m, i) => ({ value: String(i + 1), label: `${m} ${ANO}` })), padrao: String(mesAtualAno()) },
+      { name: 'palavra', label: 'Uma palavra para este mês', maxlength: 40 },
+      { name: 'destaques', label: 'Destaques e conquistas 🏆', type: 'textarea', full: true },
+      { name: 'desafios', label: 'Desafios', type: 'textarea', full: true },
+      { name: 'gratidao', label: 'Gratidão: o que este mês me trouxe de bom 🙏', type: 'textarea', full: true },
+      { name: 'ajustes', label: 'O que vou ajustar no próximo mês', type: 'textarea', full: true },
+      ...D.areas.map((a) => ({ name: 'nota_' + a.id, label: `${a.icone} ${a.nome}`, type: 'number', min: 1, max: 10, step: 1, placeholder: '1 a 10' })),
+    ],
+    titulo: (r) => `${MESES[r.mes - 1]} ${ANO}${r.palavra ? ` · “${esc(r.palavra)}”` : ''}`,
+    ordem: (r) => String(r.mes).padStart(2, '0'),
+  },
+  trimestral: {
+    rotulo: 'Trimestral', icone: '🌼',
+    dica: 'A cada 3 meses: veja os objetivos do trimestre, o que avançou nas metas e defina as prioridades do próximo trimestre.',
+    campos: () => [
+      { name: 'trimestre', label: 'Trimestre', type: 'select', options: [1, 2, 3, 4].map((t) => ({ value: String(t), label: `${t}º trimestre` })), padrao: String(trimestreAtual()) },
+      { name: 'conquistas', label: 'Maiores conquistas', type: 'textarea', full: true },
+      { name: 'naoAconteceu', label: 'O que não aconteceu e por quê', type: 'textarea', full: true },
+      { name: 'aprendizados', label: 'Aprendizados', type: 'textarea', full: true },
+      { name: 'prioridades', label: 'Prioridades do próximo trimestre', type: 'textarea', full: true },
+    ],
+    titulo: (r) => `${r.trimestre}º trimestre de ${ANO}`,
+    ordem: (r) => String(r.trimestre),
+  },
+};
+
+VIEWS.revisoes = () => {
+  const tipo = estado.revAba;
+  const cfg = REVISOES[tipo];
+  const lista = [...D.revisoes[tipo]].sort((a, b) => cfg.ordem(b).localeCompare(cfg.ordem(a)));
+  const campos = cfg.campos().filter((c) => c.type === 'textarea');
+  return `
+    ${cabecalho('📝 Revisões', 'O hábito que transforma planos em resultados: parar, olhar e ajustar.', `<button class="btn primario" data-acao="novaRevisao" data-tipo="${tipo}">+ Nova revisão ${cfg.rotulo.toLowerCase()}</button>`)}
+    ${abas('revAba', Object.entries(REVISOES).map(([k, v]) => [k, `${v.icone} ${v.rotulo}`]))}
+    <div class="dica">💡 ${cfg.dica}</div>
+    ${lista.length ? `<section class="grid-2">${lista.map((r) => {
+      const notas = tipo === 'mensal' ? D.areas.filter((a) => r['nota_' + a.id]).map((a) => `<span class="chip" style="--cor:${a.cor}">${a.icone} ${r['nota_' + a.id]}</span>`).join('') : '';
+      const humor = r.energia ? HUMORES.find((h) => h.v === r.energia) : null;
+      return `<article class="card rev-card">
+        <div class="meta-topo"><h3>${humor ? humor.e + ' ' : ''}${cfg.titulo(r)}</h3><button class="icon-btn mini" data-acao="editarRevisao" data-tipo="${tipo}" data-id="${r.id}" aria-label="Editar revisão">✎</button></div>
+        <dl>${campos.filter((c) => r[c.name]).map((c) => `<div><dt>${c.label}</dt><dd>${esc(r[c.name])}</dd></div>`).join('') || '<p class="muted">Sem anotações.</p>'}</dl>
+        ${notas ? `<div class="notas-mini">${notas}</div>` : ''}
+      </article>`;
+    }).join('')}</section>` : vazio(cfg.icone, `Nenhuma revisão ${cfg.rotulo.toLowerCase()} ainda.`, `<button class="btn primario" data-acao="novaRevisao" data-tipo="${tipo}">Fazer a primeira</button>`)}`;
+};
+
+/* ================= Retrospectiva ================= */
+VIEWS.retrospectiva = () => {
+  const feitos = D.feitos.filter((f) => doAno(f.data));
+  const metasOk = D.metas.filter((m) => progressoMeta(m) >= 100);
+  const livros = D.listas.livros.filter((l) => l.status === 'concluido' && doAno(l.data));
+  const filmes = D.listas.filmes.filter((l) => l.status === 'concluido' && doAno(l.data));
+  const viagens = D.listas.viagens.filter((l) => l.status === 'concluido' && doAno(l.data));
+  const desejos = D.desejos.filter((d) => d.feito && doAno(d.dataFeito));
+  const diario = D.diario.filter((d) => doAno(d.data));
+  const guardado = soma(D.financas.caixinhas, 'atual');
+  const melhorHab = D.habitos.map((h) => ({ h, s: melhorSequencia(h, true) })).sort((a, b) => b.s - a.s)[0];
+  const diasHabitos = D.habitos.reduce((s, h) => s + Object.keys(h.registros).filter((k) => h.registros[k] && doAno(k)).length, 0);
+  const porArea = D.areas.map((a) => ({ a, n: feitos.filter((f) => f.areaId === a.id).length }));
+  const maxArea = Math.max(1, ...porArea.map((x) => x.n));
+  const humorMes = MESES_C.map((m, i) => {
+    const es = diario.filter((d) => d.data.slice(5, 7) === String(i + 1).padStart(2, '0') && d.humor);
+    return { m, v: es.length ? soma(es, 'humor') / es.length : 0 };
+  });
+  const fotos = feitos.filter((f) => f.foto).slice(0, 12);
+  const pa = progressoAno();
+
+  return `
+    <section class="card hero retro-hero" style="display:block">
+      <p class="hero-saudacao">${pa.depois ? 'Que ano!' : pa.antes ? 'Uma prévia do que vem por aí' : `Até agora, ${pa.pct}% do ano já foi vivido`}</p>
+      <h1>Retrospectiva <span class="destaque">${ANO}</span></h1>
+      ${D.config.palavra ? `<p class="palavra">A palavra do ano foi <strong>${esc(D.config.palavra)}</strong></p>` : ''}
+      ${D.config.nome ? `<p class="muted" style="margin-top:6px">de ${esc(D.config.nome)}</p>` : ''}
+    </section>
+
+    <section class="stats cinco">
+      ${stat('🏆', feitos.length, 'feitos registrados')}
+      ${stat('🎯', `${metasOk.length}/${D.metas.length}`, 'metas concluídas')}
+      ${stat('🔁', diasHabitos, 'check-ins de hábitos')}
+      ${stat('🔥', melhorHab ? melhorHab.s : 0, melhorHab ? `melhor sequência (${esc(melhorHab.h.nome)})` : 'melhor sequência')}
+      ${stat('📚', livros.length, 'livros lidos')}
+      ${stat('🎬', filmes.length, 'filmes e séries')}
+      ${stat('✈️', viagens.length, 'viagens realizadas')}
+      ${stat('🌈', desejos.length, 'sonhos realizados')}
+      ${stat('💰', fmtDinheiro(guardado), 'guardado nas caixinhas')}
+      ${stat('📔', diario.length, 'páginas de diário')}
+    </section>
+
+    <section class="grid-2">
+      <div class="card centro">
+        <h2 style="margin-bottom:8px">🌸 Como a roda da vida mudou</h2>
+        ${radarSVG([{ classe: 'partida', valor: notaPartida }, { classe: 'atual', valor: notaAtual }])}
+        ${legendaRadar()}
+      </div>
+      <div class="card">
+        <h2 style="margin-bottom:14px">🏆 Feitos por área</h2>
+        <div class="barras-h">${porArea.map(({ a, n }) => `<div class="linha"><span class="truncar">${a.icone} ${esc(a.nome)}</span><strong class="num">${n}</strong>${barra((n / maxArea) * 100, a.cor)}</div>`).join('')}</div>
+      </div>
+    </section>
+
+    ${diario.length ? `<section class="card secao"><h2>📔 Humor médio por mês</h2>
+      <div class="barras-v">${humorMes.map((x) => `<div class="col"><div class="par"><div class="b unica" style="height:${(x.v / 5) * 100}%" title="${x.v ? x.v.toFixed(1) : 'sem registros'}"></div></div><small>${x.m}</small></div>`).join('')}</div></section>` : ''}
+
+    <section class="grid-2 secao">
+      <div class="card">
+        <h2 style="margin-bottom:12px">🎯 Metas do ano</h2>
+        ${D.metas.length ? D.metas.map((m) => {
+          const a = area(m.areaId), p = progressoMeta(m);
+          return `<div class="linha-item"><span>${p >= 100 ? '✅' : a.icone}</span><div class="cresce"><div class="meta-prog"><strong class="truncar" style="color:var(--text)">${esc(m.titulo)}</strong><span>${p}%</span></div>${barra(p, a.cor)}</div></div>`;
+        }).join('') : '<p class="muted">Nenhuma meta cadastrada.</p>'}
+      </div>
+      <div class="card">
+        <h2 style="margin-bottom:12px">✨ Momentos marcantes</h2>
+        ${feitos.length ? [...feitos].sort((a, b) => a.data.localeCompare(b.data)).slice(-10).reverse().map((f) => `<div class="linha-item"><span>${area(f.areaId).icone}</span><div class="cresce"><strong>${esc(f.titulo)}</strong><div class="muted pequeno">${fmtData(f.data)}</div></div></div>`).join('') : '<p class="muted">Os feitos de 2027 aparecerão aqui.</p>'}
+      </div>
+    </section>
+
+    ${fotos.length ? `<section class="card secao"><h2 style="margin-bottom:12px">📸 Álbum do ano</h2>
+      <div class="galeria">${fotos.map((f) => `<figure><img src="${f.foto}" alt="${esc(f.titulo)}" loading="lazy"><figcaption>${esc(f.titulo)}</figcaption></figure>`).join('')}</div></section>` : ''}`;
+};
+
+'use strict';
+/* =========================================================
+   Páginas extras: finanças, listas, lista da vida, diário, configurações
+   ========================================================= */
+
+/* ================= Finanças ================= */
+VIEWS.financas = () => {
+  if (!estado.finMes) estado.finMes = mesAtualAno();
+  const m = estado.finMes;
+  const k = mesKey(m);
+  const F = D.financas;
+  const lanc = F.lancamentos.filter((l) => l.mes === k);
+  const receitas = lanc.filter((l) => l.tipo === 'receita');
+  const despesas = lanc.filter((l) => l.tipo === 'despesa');
+  const rec = soma(receitas), desp = soma(despesas), saldo = rec - desp;
+  const taxa = rec > 0 ? Math.round((saldo / rec) * 100) : 0;
+
+  const categorias = CATEGORIAS_DESPESA
+    .map((c) => ({ c, v: soma(despesas.filter((l) => l.categoria === c)), lim: Number(F.limites[c]) || 0 }))
+    .filter((x) => x.v || x.lim)
+    .sort((a, b) => b.v - a.v);
+
+  const anual = Array.from({ length: 12 }, (_, i) => {
+    const ls = F.lancamentos.filter((l) => l.mes === mesKey(i + 1));
+    return { r: soma(ls.filter((l) => l.tipo === 'receita')), d: soma(ls.filter((l) => l.tipo === 'despesa')) };
+  });
+  const maxAnual = Math.max(1, ...anual.map((x) => Math.max(x.r, x.d)));
+  const totAnoR = soma(anual, 'r'), totAnoD = soma(anual, 'd');
+
+  const linhaLanc = (l) => `<div class="linha-item">
+    <span class="area-icone" style="--cor:${l.tipo === 'receita' ? '#9fd8b8' : '#f4adc8'};width:36px;height:36px;font-size:1rem;border-radius:11px">${l.tipo === 'receita' ? '↓' : '↑'}</span>
+    <div class="cresce"><strong class="truncar" style="display:block">${esc(l.descricao || l.categoria)}</strong><span class="muted pequeno">${esc(l.categoria)}</span></div>
+    <strong class="num" style="color:${l.tipo === 'receita' ? 'var(--ok)' : 'var(--text)'}">${l.tipo === 'receita' ? '+' : '−'} ${fmtDinheiro(l.valor)}</strong>
+    <button class="icon-btn mini" data-acao="editarLancamento" data-id="${l.id}" aria-label="Editar lançamento">✎</button>
+  </div>`;
+
+  return `
+    ${cabecalho('💸 Finanças', 'Orçamento mensal simples e caixinhas para seus objetivos.', '<button class="btn" data-acao="editarLimites">⚙️ Limites</button><button class="btn primario" data-acao="novoLancamento">+ Lançamento</button>')}
+    <div class="secao-titulo" style="margin-top:0">
+      <div class="mes-nav">
+        <button class="icon-btn mini" data-acao="finMes" data-delta="-1" aria-label="Mês anterior" ${m <= 1 ? 'disabled' : ''}>‹</button>
+        <strong>${MESES[m - 1]} ${ANO}</strong>
+        <button class="icon-btn mini" data-acao="finMes" data-delta="1" aria-label="Próximo mês" ${m >= 12 ? 'disabled' : ''}>›</button>
+      </div>
+    </div>
+    <section class="stats">
+      ${stat('💚', fmtDinheiro(rec), 'receitas do mês')}
+      ${stat('🧾', fmtDinheiro(desp), 'despesas do mês')}
+      ${stat(saldo >= 0 ? '✨' : '⚠️', fmtDinheiro(saldo), 'saldo do mês')}
+      ${stat('🐷', `${taxa}%`, 'da renda poupada')}
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <div class="card-topo"><h2>📋 Lançamentos</h2><span class="muted pequeno">${lanc.length} no mês</span></div>
+        ${lanc.length ? `
+          ${receitas.length ? `<h3 class="muted pequeno" style="margin:4px 0">RECEITAS</h3>${receitas.map(linhaLanc).join('')}` : ''}
+          ${despesas.length ? `<h3 class="muted pequeno" style="margin:14px 0 4px">DESPESAS</h3>${[...despesas].sort((a, b) => b.valor - a.valor).map(linhaLanc).join('')}` : ''}`
+          : vazio('🧾', 'Nenhum lançamento neste mês.', '<button class="btn suave mini" data-acao="novoLancamento">+ Adicionar</button>')}
+      </div>
+      <div class="card">
+        <div class="card-topo"><h2>🍰 Despesas por categoria</h2><button class="btn mini suave" data-acao="editarLimites">Limites</button></div>
+        ${categorias.length ? `<div class="barras-h">${categorias.map((x) => {
+          const p = x.lim ? pct(x.v, x.lim) : desp ? Math.round((x.v / desp) * 100) : 0;
+          const excedeu = x.lim && x.v > x.lim;
+          return `<div class="linha"><span class="truncar">${esc(x.c)}</span><span class="num pequeno"><strong>${fmtDinheiro(x.v)}</strong>${x.lim ? ` / ${fmtDinheiro(x.lim)}` : ''}${excedeu ? ' ⚠️' : ''}</span>
+            <div class="barra ${excedeu ? 'excedeu' : ''}"><span style="width:${p}%"></span></div></div>`;
+        }).join('')}</div><p class="muted pequeno" style="margin-top:12px">Com limite definido, a barra mostra quanto do limite já foi usado.</p>`
+          : '<p class="muted">As despesas aparecerão aqui separadas por categoria.</p>'}
+      </div>
+    </section>
+
+    <section class="card secao">
+      <div class="card-topo"><h2>📆 Visão do ano</h2>
+        <span class="legenda" style="margin:0"><span><i style="background:var(--primary)"></i>Receitas</span><span><i style="background:var(--accent)"></i>Despesas</span></span></div>
+      <div class="barras-v">${anual.map((x, i) => `<div class="col ${i + 1 === m ? 'ativo' : ''}">
+        <div class="par"><div class="b rec" style="height:${(x.r / maxAnual) * 100}%" title="Receitas: ${fmtDinheiro(x.r)}"></div><div class="b desp" style="height:${(x.d / maxAnual) * 100}%" title="Despesas: ${fmtDinheiro(x.d)}"></div></div>
+        <small>${MESES_C[i]}</small></div>`).join('')}</div>
+      <p class="muted pequeno" style="margin-top:10px">No ano: receitas ${fmtDinheiro(totAnoR)} · despesas ${fmtDinheiro(totAnoD)} · saldo <strong>${fmtDinheiro(totAnoR - totAnoD)}</strong></p>
+    </section>
+
+    <div class="secao-titulo"><h2>🐷 Caixinhas</h2><button class="btn mini suave" data-acao="novaCaixinha">+ Nova caixinha</button></div>
+    ${F.caixinhas.length ? `<section class="grid-cards">${F.caixinhas.map((c) => {
+      const p = pct(c.atual, c.alvo);
+      return `<div class="card meta ${p >= 100 ? 'concluida' : ''}">
+        <div class="meta-topo"><h3>${esc(c.icone || '🐷')} ${esc(c.nome)}</h3><button class="icon-btn mini" data-acao="editarCaixinha" data-id="${c.id}" aria-label="Editar caixinha">✎</button></div>
+        <div class="stat-valor">${fmtDinheiro(c.atual)}</div>
+        <div class="meta-prog"><span>${p}% de ${fmtDinheiro(c.alvo)}</span><span>${c.prazo ? `até ${fmtData(c.prazo)}` : ''}</span></div>
+        ${barra(p)}
+        <button class="btn mini suave" data-acao="depositar" data-id="${c.id}">+ Depositar / retirar</button>
+      </div>`;
+    }).join('')}</section>` : vazio('🐷', 'Crie caixinhas para reserva, viagem, presente…')}`;
+};
+
+/* ================= Listas ================= */
+const LISTAS = {
+  livros: {
+    rotulo: '📚 Livros', item: 'livro', campoTitulo: 'Título', campoSub: 'Autor(a)',
+    status: [['quero', '📌 Quero ler'], ['andamento', '📖 Lendo'], ['concluido', '✅ Lidos']],
+  },
+  filmes: {
+    rotulo: '🎬 Filmes e séries', item: 'filme ou série', campoTitulo: 'Título', campoSub: 'Tipo (filme, série, documentário…)',
+    status: [['quero', '📌 Quero ver'], ['andamento', '🍿 Assistindo'], ['concluido', '✅ Vistos']],
+  },
+  viagens: {
+    rotulo: '✈️ Viagens', item: 'viagem', campoTitulo: 'Destino', campoSub: 'Tipo (praia, natureza, cidade…)',
+    status: [['quero', '💭 Sonho'], ['andamento', '🧳 Planejando'], ['concluido', '✅ Realizadas']],
+  },
+};
+
+VIEWS.listas = () => {
+  const aba = estado.listaAba;
+  const cfg = LISTAS[aba];
+  const itens = D.listas[aba];
+  const concluidosAno = itens.filter((i) => i.status === 'concluido' && doAno(i.data)).length;
+  const metaLivros = Number(D.config.metaLivros) || 0;
+
+  return `
+    ${cabecalho('📖 Livros, filmes e viagens', 'Listas para lembrar do que você quer viver e registrar o que já viveu.', `<button class="btn primario" data-acao="novoItemLista" data-lista="${aba}">+ Adicionar ${cfg.item}</button>`)}
+    ${abas('listaAba', Object.entries(LISTAS).map(([k, v]) => [k, v.rotulo]))}
+    ${aba === 'livros' && metaLivros ? `<div class="card" style="margin-bottom:18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="anel mini" style="--p:${pct(concluidosAno, metaLivros)}"><span>${pct(concluidosAno, metaLivros)}%</span></div>
+        <div style="flex:1;min-width:180px"><h3>Desafio de leitura ${ANO}</h3><p class="muted">${concluidosAno} de ${metaLivros} livros lidos. <a href="#config">Alterar meta</a></p></div>
+      </div>` : `<p class="muted" style="margin-bottom:16px">${concluidosAno} concluído(s) em ${ANO}.</p>`}
+    <section class="kanban">
+      ${cfg.status.map(([s, rotulo]) => {
+        const doStatus = itens.filter((i) => i.status === s);
+        return `<div class="kanban-col"><h2>${rotulo}<span>${doStatus.length}</span></h2>
+          ${doStatus.map((i) => `<div class="item-card">
+            <h3>${esc(i.titulo)}</h3>
+            ${i.sub ? `<span class="muted pequeno">${esc(i.sub)}</span>` : ''}
+            ${i.nota ? estrelas(i.nota) : ''}
+            ${i.data && s === 'concluido' ? `<span class="muted pequeno">${fmtData(i.data)}</span>` : ''}
+            ${i.comentario ? `<p class="pequeno" style="overflow-wrap:anywhere">${esc(i.comentario)}</p>` : ''}
+            <div class="linha-acoes">
+              <select data-mudar="statusItem" data-lista="${aba}" data-id="${i.id}" aria-label="Mudar status">${cfg.status.map(([v, r]) => `<option value="${v}" ${v === i.status ? 'selected' : ''}>${r}</option>`).join('')}</select>
+              <span class="espaco"></span>
+              <button class="icon-btn mini" data-acao="editarItemLista" data-lista="${aba}" data-id="${i.id}" aria-label="Editar">✎</button>
+            </div>
+          </div>`).join('') || '<p class="muted pequeno centro" style="padding:10px">Vazio</p>'}
+        </div>`;
+      }).join('')}
+    </section>`;
+};
+
+/* ================= Lista da vida ================= */
+function itemDesejo(d) {
+  return `<li class="${d.feito ? 'feito' : ''}">
+    <label class="check"><input type="checkbox" data-mudar="desejo" data-id="${d.id}" ${d.feito ? 'checked' : ''}><span>${esc(d.texto)}${d.feito && d.dataFeito ? `<small class="obj-meta">realizado em ${fmtData(d.dataFeito)}</small>` : ''}</span></label>
+    ${d.feito && !d.noMural ? `<button class="btn mini suave" data-acao="desejoAoMural" data-id="${d.id}" title="Registrar no mural de feitos">🏆</button>` : ''}
+    <button class="icon-btn mini" data-acao="editarDesejo" data-id="${d.id}" aria-label="Editar">✎</button>
+  </li>`;
+}
+
+VIEWS.desejos = () => {
+  const f = estado.desejosFiltro;
+  const lista = D.desejos.filter((d) => f === 'todas' || d.areaId === f);
+  const abertos = lista.filter((d) => !d.feito);
+  const feitos = lista.filter((d) => d.feito);
+  const total = D.desejos.length, ok = D.desejos.filter((d) => d.feito).length;
+  return `
+    ${cabecalho('🌈 Lista da vida', 'Sonhos, experiências e coisas que você quer fazer um dia, sem pressa.', '<button class="btn primario" data-acao="novoDesejo">+ Novo sonho</button>')}
+    <div class="card" style="margin-bottom:18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+      <div class="anel mini" style="--p:${pct(ok, total)}"><span>${ok}</span></div>
+      <div style="flex:1;min-width:180px"><h3>${ok} de ${total} sonhos realizados</h3><p class="muted">Quando realizar um, marque e leve para o mural de feitos 🏆</p></div>
+    </div>
+    ${filtrosArea('desejosFiltro')}
+    ${lista.length ? `<section class="grid-2">
+      <div class="card"><h2 style="margin-bottom:12px">💭 Para realizar (${abertos.length})</h2>${abertos.length ? `<ul class="lista">${abertos.map(itemDesejo).join('')}</ul>` : '<p class="muted">Tudo realizado! Hora de sonhar mais 😄</p>'}</div>
+      <div class="card"><h2 style="margin-bottom:12px">🌟 Realizados (${feitos.length})</h2>${feitos.length ? `<ul class="lista">${feitos.map(itemDesejo).join('')}</ul>` : '<p class="muted">O primeiro está chegando.</p>'}</div>
+    </section>` : vazio('🌈', 'Escreva sem filtro: lugares, experiências, aprendizados, aventuras.', '<button class="btn primario" data-acao="novoDesejo">+ Adicionar sonho</button>')}`;
+};
+
+/* ================= Diário ================= */
+VIEWS.diario = () => {
+  const entradas = [...D.diario].sort((a, b) => b.data.localeCompare(a.data));
+  const porDia = {};
+  D.diario.forEach((e) => { if (e.humor) porDia[e.data] = e.humor; });
+  const hoje = hojeISO();
+  const doAnoQtd = D.diario.filter((e) => doAno(e.data)).length;
+
+  const heat = MESES_C.map((m, i) => {
+    const nd = diasNoMes(ANO, i);
+    let s = `<span class="mes-rotulo">${m}</span>`;
+    for (let d = 1; d <= 31; d++) {
+      if (d > nd) { s += '<span class="dia vazio-dia"></span>'; continue; }
+      const iso = dataISO(new Date(ANO, i, d));
+      const h = porDia[iso];
+      s += `<button type="button" class="dia ${h ? 'h' + h : ''}" data-acao="diarioDia" data-dia="${iso}" title="${fmtData(iso)}${h ? ' · ' + HUMORES[h - 1].t : ''}" aria-label="${fmtData(iso)}"></button>`;
+    }
+    return s;
+  }).join('');
+
+  return `
+    ${cabecalho('📔 Diário', `Um espaço para registrar como você está. ${doAnoQtd} ${doAnoQtd === 1 ? 'registro' : 'registros'} em ${ANO}.`, '<button class="btn primario" data-acao="novoDiario">+ Escrever hoje</button>')}
+    <section class="card">
+      <div class="card-topo"><h2>🎨 Humor do ano</h2>
+        <span class="legenda" style="margin:0">${HUMORES.map((h) => `<span title="${h.t}">${h.e}<i class="dia h${h.v}" style="display:inline-block;width:12px;height:12px;border-radius:3px;margin:0 0 0 4px;vertical-align:middle"></i></span>`).join('')}</span>
+      </div>
+      <div class="rolagem-x"><div class="heatmap">${heat}</div></div>
+      <p class="muted pequeno" style="margin-top:8px">Toque em um dia para escrever ou ver o registro.</p>
+    </section>
+    <h2 class="secao-titulo">✍️ Registros</h2>
+    ${entradas.length ? `<div class="pilha">${entradas.map((e) => {
+      const h = e.humor ? HUMORES[e.humor - 1] : null;
+      return `<article class="card diario-entrada">
+        <span class="diario-humor" title="${h ? h.t : ''}">${h ? h.e : '📝'}</span>
+        <div class="cresce">
+          <div class="meta-topo"><strong>${maiuscula(fmtDataLonga(e.data))}${e.data.slice(0, 4) !== String(new Date().getFullYear()) ? ` de ${e.data.slice(0, 4)}` : ''}</strong>
+            <button class="icon-btn mini" data-acao="editarDiario" data-id="${e.id}" aria-label="Editar registro">✎</button></div>
+          ${e.texto ? `<p>${esc(e.texto)}</p>` : ''}
+          ${e.gratidao ? `<div class="gratidao">🙏 ${esc(e.gratidao)}</div>` : ''}
+        </div>
+      </article>`;
+    }).join('')}</div>` : vazio('📔', 'Nenhum registro ainda. Como foi o seu dia?', `<button class="btn primario" data-acao="novoDiario" data-dia="${hoje}">Escrever agora</button>`)}`;
+};
+
+/* ================= Configurações ================= */
+VIEWS.config = () => {
+  const c = D.config;
+  let usado = 0;
+  try { usado = (localStorage.getItem(CHAVE) || '').length; } catch { /* sem acesso */ }
+  const kb = Math.round((usado * 2) / 1024);
+  return `
+    ${cabecalho('⚙️ Configurações', 'Personalize o seu ano e cuide dos seus dados.')}
+    <section class="grid-2">
+      <form class="card form-grid" data-form="config" style="align-content:start">
+        <h2 class="campo full">🌸 Sobre o seu ano</h2>
+        <label class="campo"><span>Seu nome ou apelido</span><input name="nome" value="${esc(c.nome)}" maxlength="60"></label>
+        <label class="campo"><span>Palavra do ano</span><input name="palavra" value="${esc(c.palavra)}" maxlength="40" placeholder="Ex.: Constância, Leveza, Coragem"></label>
+        <label class="campo full"><span>Visão do ano</span><textarea name="visao" rows="3" maxlength="500" placeholder="Uma frase que resume como você quer viver 2027">${esc(c.visao)}</textarea></label>
+        <label class="campo"><span>Meta de livros em ${ANO}</span><input type="number" name="metaLivros" min="0" max="500" value="${esc(c.metaLivros)}"></label>
+        <label class="campo"><span>Modo</span><select name="modo">
+          ${[['auto', '🌓 Automático (do sistema)'], ['claro', '☀️ Claro'], ['escuro', '🌙 Escuro']].map(([v, r]) => `<option value="${v}" ${c.modo === v ? 'selected' : ''}>${r}</option>`).join('')}
+        </select></label>
+        <div class="campo full"><span>Cor do tema</span>
+          <div class="paletas">
+            <label class="paleta-opcao"><input type="radio" name="paleta" value="lilas" ${c.paleta === 'lilas' ? 'checked' : ''}><span><i style="background:linear-gradient(135deg,#c4b0f0,#9b7dd6)"></i>Lilás</span></label>
+            <label class="paleta-opcao"><input type="radio" name="paleta" value="rosa" ${c.paleta === 'rosa' ? 'checked' : ''}><span><i style="background:linear-gradient(135deg,#fbd3e2,#e38aae)"></i>Rosa bebê</span></label>
+          </div>
+        </div>
+        <div class="form-acoes"><span class="espaco"></span><button class="btn primario">Salvar</button></div>
+      </form>
+
+      <div class="pilha">
+        <div class="card">
+          <h2 style="margin-bottom:8px">🎨 Áreas da vida</h2>
+          <p class="muted pequeno" style="margin-bottom:12px">Você pode renomear e trocar o ícone e a cor de cada área.</p>
+          <div class="pilha" style="gap:6px">${D.areas.map((a) => `<div class="linha-item"><span class="area-icone" style="--cor:${a.cor};width:36px;height:36px;font-size:1rem;border-radius:11px">${a.icone}</span><span class="cresce truncar">${esc(a.nome)}</span><button class="btn mini" data-acao="editarArea" data-id="${a.id}">Editar</button></div>`).join('')}</div>
+        </div>
+        <div class="card">
+          <h2 style="margin-bottom:8px">💾 Seus dados</h2>
+          <p class="muted pequeno">Tudo fica salvo <strong>apenas neste navegador</strong> (cerca de ${kb} KB usados). Faça backups com frequência e use “Importar” para levar seus dados a outro aparelho.</p>
+          <p class="pequeno" style="margin:8px 0 14px">Último backup: <strong>${c.ultimoBackup ? fmtData(c.ultimoBackup) : 'nunca'}</strong></p>
+          <div class="acoes">
+            <button class="btn primario" data-acao="exportar">⬇️ Exportar backup</button>
+            <button class="btn" data-acao="importar">⬆️ Importar backup</button>
+          </div>
+        </div>
+        <div class="card">
+          <h2 style="margin-bottom:8px">🧪 Outros</h2>
+          <div class="acoes">
+            <button class="btn" data-acao="exemplos">✨ Carregar exemplos</button>
+            <button class="btn perigo-texto" data-acao="resetar">🗑 Apagar tudo</button>
+          </div>
+        </div>
+      </div>
+    </section>`;
+};
+
+'use strict';
+/* =========================================================
+   App: navegação, tema, ações e formulários
+   ========================================================= */
+
+const NAV = [
+  { grupo: 'Meu ano', itens: [
+    ['inicio', '🏠', 'Início'],
+    ['areas', '🌸', 'Áreas da vida'],
+    ['metas', '🎯', 'Metas e objetivos'],
+    ['habitos', '🔁', 'Hábitos'],
+    ['feitos', '🏆', 'Mural de feitos'],
+    ['revisoes', '📝', 'Revisões'],
+    ['retrospectiva', '🎞️', 'Retrospectiva'],
+  ] },
+  { grupo: 'Extras', itens: [
+    ['financas', '💸', 'Finanças'],
+    ['listas', '📖', 'Livros, filmes e viagens'],
+    ['desejos', '🌈', 'Lista da vida'],
+    ['diario', '📔', 'Diário'],
+  ] },
+  { grupo: '', itens: [['config', '⚙️', 'Configurações']] },
+];
+
+function montarNav() {
+  $('#nav').innerHTML = NAV.map((g) => `
+    <div class="nav-grupo">
+      ${g.grupo ? `<div class="nav-grupo-titulo">${g.grupo}</div>` : ''}
+      ${g.itens.map(([r, i, t]) => `<a class="nav-link" href="#${r}" data-rota="${r}"><span class="nav-icone">${i}</span>${t}</a>`).join('')}
+    </div>`).join('');
+}
+
+/* ---------- Tema ---------- */
+const mqEscuro = window.matchMedia('(prefers-color-scheme: dark)');
+function aplicarTema() {
+  const html = document.documentElement;
+  html.dataset.paleta = D.config.paleta === 'rosa' ? 'rosa' : 'lilas';
+  const temaHost = html.dataset.theme; // definido por alguns visualizadores (claro/escuro)
+  const autoEscuro = temaHost === 'dark' ? true : temaHost === 'light' ? false : mqEscuro.matches;
+  const escuro = D.config.modo === 'escuro' || (D.config.modo === 'auto' && autoEscuro);
+  html.dataset.escuro = escuro ? '1' : '0';
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = escuro ? (html.dataset.paleta === 'rosa' ? '#211720' : '#1b1625') : (html.dataset.paleta === 'rosa' ? '#f3b6cd' : '#b39ae6');
+}
+mqEscuro.addEventListener?.('change', () => { if (D.config.modo === 'auto') aplicarTema(); });
+
+/* ---------- Roteamento ---------- */
+let rotaAnterior = null;
+function renderizar() {
+  // Rotas: #inicio, #metas, #area-saude (aceita também o formato antigo #/area/saude)
+  const bruto = location.hash.replace(/^#\/?/, '');
+  const partes = bruto.startsWith('area-') ? ['area', bruto.slice(5)] : bruto.split('/');
+  const nome = VIEWS[partes[0]] ? partes[0] : 'inicio';
+  const main = $('#main');
+  try {
+    main.innerHTML = VIEWS[nome](...partes.slice(1).map(decodeURIComponent));
+  } catch (e) {
+    console.error(e);
+    main.innerHTML = vazio('😵', 'Algo deu errado ao mostrar esta página.', '<a class="btn" href="#inicio">Voltar ao início</a>');
+  }
+  const rotaNav = nome === 'area' ? 'areas' : nome;
+  $$('.nav-link').forEach((a) => {
+    const ativo = a.dataset.rota === rotaNav;
+    a.classList.toggle('ativo', ativo);
+    if (ativo) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+  if (location.hash !== rotaAnterior) {
+    if (rotaAnterior !== null) { window.scrollTo(0, 0); main.focus({ preventScroll: true }); }
+    rotaAnterior = location.hash;
+    $('#app').classList.remove('menu-aberto');
+    const item = NAV.flatMap((g) => g.itens).find(([r]) => r === rotaNav);
+    document.title = item && nome !== 'inicio' ? `${item[2]} · Meu Ano 2027` : 'Meu Ano 2027';
+    if (nome === 'habitos') rolarParaHoje();
+  }
+}
+window.addEventListener('hashchange', renderizar);
+
+function rolarParaHoje() {
+  const caixa = $('.rolagem-x');
+  const col = $('.hab-tabela th.hoje-col');
+  if (caixa && col) caixa.scrollLeft = Math.max(0, col.offsetLeft - caixa.clientWidth + 80);
+}
+
+function mudou() { salvar(); renderizar(); }
+
+/* ---------- Formulários de cada entidade ---------- */
+function abrirMeta(m, areaId) {
+  const campos = [
+    { name: 'titulo', label: 'Meta', required: true, full: true, placeholder: 'Ex.: Correr uma meia maratona' },
+    { name: 'areaId', label: 'Área da vida', type: 'area', padrao: areaId || D.areas[0].id },
+    { name: 'prazo', label: 'Prazo', type: 'date', padrao: `${ANO}-12-31` },
+    { name: 'descricao', label: 'Por que isso importa para mim?', type: 'textarea', full: true, rows: 2 },
+    { name: 'tipo', label: 'Como medir o progresso', type: 'select', full: true, padrao: 'numerica', options: [
+      { value: 'numerica', label: '🔢 Por número (ex.: 24 livros, R$ 10.000)' },
+      { value: 'etapas', label: '✅ Por etapas (checklist)' },
+      { value: 'simples', label: '☑️ Feito ou não feito' },
+    ] },
+    { name: 'atual', label: 'Valor atual', type: 'number', step: 'any', padrao: 0, mostrarSe: { campo: 'tipo', valores: ['numerica'] } },
+    { name: 'alvo', label: 'Valor alvo', type: 'number', step: 'any', min: 0, mostrarSe: { campo: 'tipo', valores: ['numerica'] } },
+    { name: 'unidade', label: 'Unidade', placeholder: 'livros, km, R$…', dica: 'Use “R$” para formatar como dinheiro.', mostrarSe: { campo: 'tipo', valores: ['numerica'] } },
+    { name: 'passo', label: 'Quanto soma cada toque no +', type: 'number', step: 'any', min: 0, padrao: 1, mostrarSe: { campo: 'tipo', valores: ['numerica'] } },
+    { name: 'etapasTexto', label: 'Etapas (uma por linha)', type: 'textarea', full: true, rows: 5, placeholder: 'Pesquisar\nComeçar\nTerminar', mostrarSe: { campo: 'tipo', valores: ['etapas'] } },
+  ];
+  const valores = m ? { ...m, etapasTexto: (m.etapas || []).map((e) => e.texto).join('\n') } : {};
+  formModal({
+    titulo: m ? 'Editar meta' : '🎯 Nova meta',
+    intro: m ? '' : 'Dica: metas boas são específicas e mensuráveis. “Ler 24 livros” é melhor que “ler mais”.',
+    campos, valores,
+    aoSalvar: (d) => {
+      if (d.tipo === 'numerica' && !(d.alvo > 0)) { toast('Informe um valor alvo maior que zero'); return false; }
+      const antes = m ? progressoMeta(m) : 0;
+      const anteriores = m ? m.etapas || [] : [];
+      const etapas = d.etapasTexto.split('\n').map((s) => s.trim()).filter(Boolean).map((t) => {
+        const ex = anteriores.find((e) => e.texto === t);
+        return { id: ex ? ex.id : uid(), texto: t, feito: ex ? ex.feito : false };
+      });
+      if (d.tipo === 'etapas' && !etapas.length) { toast('Adicione pelo menos uma etapa'); return false; }
+      const obj = { titulo: d.titulo, areaId: d.areaId, prazo: d.prazo, descricao: d.descricao, tipo: d.tipo, unidade: d.unidade, atual: d.atual || 0, alvo: d.alvo || 0, passo: d.passo || 1, etapas };
+      if (m) Object.assign(m, obj);
+      else D.metas.push({ id: uid(), criadoEm: hojeISO(), concluida: false, ...obj });
+      if (m) setTimeout(() => celebrarSeConcluiu(m, antes));
+    },
+    aoExcluir: m ? () => {
+      D.metas = D.metas.filter((x) => x !== m);
+      D.objetivos.forEach((o) => { if (o.metaId === m.id) o.metaId = ''; });
+    } : null,
+  });
+}
+
+function celebrarSeConcluiu(m, antes) {
+  if (antes < 100 && progressoMeta(m) >= 100) {
+    toast(`🎉 Meta concluída: ${esc(m.titulo)}!`, {
+      texto: 'Levar ao mural',
+      fn: () => {
+        D.feitos.push({ id: uid(), titulo: `Concluí a meta: ${m.titulo}`, data: hojeISO(), areaId: m.areaId, descricao: m.descricao || '', foto: '' });
+        mudou();
+        toast('🏆 Adicionado ao mural de feitos!');
+      },
+    });
+  }
+}
+
+function abrirObjetivo(o, tri) {
+  formModal({
+    titulo: o ? 'Editar objetivo' : '🗓️ Novo objetivo trimestral',
+    campos: [
+      { name: 'titulo', label: 'Objetivo', required: true, full: true, placeholder: 'Ex.: Ler 6 livros' },
+      { name: 'trimestre', label: 'Trimestre', type: 'select', padrao: String(tri || trimestreAtual()), options: [1, 2, 3, 4].map((t) => ({ value: String(t), label: `${t}º trimestre` })) },
+      { name: 'metaId', label: 'Ligado à meta', type: 'select', options: [{ value: '', label: '— Nenhuma —' }, ...D.metas.map((m) => ({ value: m.id, label: m.titulo }))] },
+      { name: 'areaId', label: 'Área (se não houver meta)', type: 'area', opcional: true },
+      { name: 'feito', label: 'Concluído', type: 'checkbox' },
+    ],
+    valores: o ? { ...o, trimestre: String(o.trimestre) } : {},
+    aoSalvar: (d) => {
+      const meta = D.metas.find((m) => m.id === d.metaId);
+      const obj = { titulo: d.titulo, trimestre: Number(d.trimestre), metaId: d.metaId, areaId: meta ? meta.areaId : d.areaId, feito: d.feito };
+      if (o) Object.assign(o, obj); else D.objetivos.push({ id: uid(), ...obj });
+    },
+    aoExcluir: o ? () => { D.objetivos = D.objetivos.filter((x) => x !== o); } : null,
+  });
+}
+
+function abrirHabito(h, areaId) {
+  formModal({
+    titulo: h ? 'Editar hábito' : '🔁 Novo hábito',
+    intro: h ? '' : 'Comece pequeno: “ler 10 minutos” é mais sustentável que “ler 1 hora”.',
+    campos: [
+      { name: 'nome', label: 'Hábito', required: true, full: true, placeholder: 'Ex.: Beber 2 L de água' },
+      { name: 'icone', label: 'Emoji', placeholder: '💧', maxlength: 8, padrao: '⭐' },
+      { name: 'areaId', label: 'Área da vida', type: 'area', padrao: areaId || D.areas[0].id },
+      { name: 'metaSemanal', label: 'Quantas vezes por semana?', type: 'number', min: 1, max: 7, step: 1, padrao: 7 },
+    ],
+    valores: h || {},
+    aoSalvar: (d) => {
+      const obj = { nome: d.nome, icone: d.icone, areaId: d.areaId, metaSemanal: Math.min(7, Math.max(1, d.metaSemanal || 7)) };
+      if (h) Object.assign(h, obj); else D.habitos.push({ id: uid(), registros: {}, ...obj });
+    },
+    aoExcluir: h ? () => { D.habitos = D.habitos.filter((x) => x !== h); } : null,
+  });
+}
+
+function abrirFeito(f, areaId, extra = {}) {
+  formModal({
+    titulo: f ? 'Editar feito' : '🏆 Registrar feito',
+    campos: [
+      { name: 'titulo', label: 'O que você conquistou ou viveu?', required: true, full: true },
+      { name: 'data', label: 'Data', type: 'date', required: true, padrao: hojeISO() },
+      { name: 'areaId', label: 'Área da vida', type: 'area', opcional: true, padrao: areaId || '' },
+      { name: 'descricao', label: 'Conte mais (como se sentiu, quem estava junto…)', type: 'textarea', full: true },
+      { name: 'foto', label: 'Foto (opcional)', type: 'imagem', full: true },
+    ],
+    valores: f || extra,
+    aoSalvar: (d) => {
+      if (f) Object.assign(f, d);
+      else { D.feitos.push({ id: uid(), ...d }); setTimeout(() => toast('🏆 Feito registrado! Parabéns!')); }
+    },
+    aoExcluir: f ? () => { D.feitos = D.feitos.filter((x) => x !== f); } : null,
+  });
+}
+
+function abrirRevisao(tipo, r) {
+  const cfg = REVISOES[tipo];
+  const campos = cfg.campos();
+  let valores = r ? { ...r } : {};
+  if (tipo === 'mensal') {
+    const mes = r ? r.mes : mesAtualAno();
+    valores.mes = String(mes);
+    D.areas.forEach((a) => { if (valores['nota_' + a.id] == null && a.notas[mesKey(mes)]) valores['nota_' + a.id] = a.notas[mesKey(mes)]; });
+  }
+  if (tipo === 'trimestral' && r) valores.trimestre = String(r.trimestre);
+  formModal({
+    titulo: `${cfg.icone} Revisão ${cfg.rotulo.toLowerCase()}`,
+    campos, valores,
+    aoSalvar: (d) => {
+      if (tipo === 'mensal') {
+        d.mes = Number(d.mes);
+        D.areas.forEach((a) => {
+          const v = d['nota_' + a.id];
+          if (v != null) {
+            d['nota_' + a.id] = Math.min(10, Math.max(1, Math.round(v)));
+            a.notas[mesKey(d.mes)] = d['nota_' + a.id];
+          }
+        });
+      }
+      if (tipo === 'trimestral') d.trimestre = Number(d.trimestre);
+      if (r) Object.assign(r, d); else D.revisoes[tipo].push({ id: uid(), criadoEm: hojeISO(), ...d });
+    },
+    aoExcluir: r ? () => { D.revisoes[tipo] = D.revisoes[tipo].filter((x) => x !== r); } : null,
+  });
+}
+
+function abrirLancamento(l) {
+  const m = estado.finMes || mesAtualAno();
+  formModal({
+    titulo: l ? 'Editar lançamento' : '💸 Novo lançamento',
+    campos: [
+      { name: 'tipo', label: 'Tipo', type: 'select', padrao: 'despesa', options: [{ value: 'despesa', label: '↑ Despesa' }, { value: 'receita', label: '↓ Receita' }] },
+      { name: 'valor', label: 'Valor (R$)', type: 'number', step: '0.01', min: 0, required: true },
+      { name: 'descricao', label: 'Descrição', full: true, placeholder: 'Ex.: Mercado do mês' },
+      { name: 'catDespesa', label: 'Categoria', type: 'select', options: CATEGORIAS_DESPESA.map((c) => ({ value: c, label: c })), mostrarSe: { campo: 'tipo', valores: ['despesa'] } },
+      { name: 'catReceita', label: 'Categoria', type: 'select', options: CATEGORIAS_RECEITA.map((c) => ({ value: c, label: c })), mostrarSe: { campo: 'tipo', valores: ['receita'] } },
+      { name: 'mes', label: 'Mês', type: 'select', options: MESES.map((n, i) => ({ value: String(i + 1), label: n })) },
+      ...(l ? [] : [{ name: 'repetir', label: 'Repetir até dezembro (gasto ou receita fixa)', type: 'checkbox', full: true }]),
+    ],
+    valores: l ? { ...l, catDespesa: l.categoria, catReceita: l.categoria, mes: String(Number(l.mes.slice(5))) } : { mes: String(m) },
+    aoSalvar: (d) => {
+      if (!(d.valor > 0)) { toast('Informe um valor maior que zero'); return false; }
+      const base = { tipo: d.tipo, valor: d.valor, descricao: d.descricao, categoria: d.tipo === 'receita' ? d.catReceita : d.catDespesa };
+      const mesN = Number(d.mes);
+      if (l) Object.assign(l, base, { mes: mesKey(mesN) });
+      else {
+        const ate = d.repetir ? 12 : mesN;
+        for (let i = mesN; i <= ate; i++) D.financas.lancamentos.push({ id: uid(), ...base, mes: mesKey(i) });
+      }
+    },
+    aoExcluir: l ? () => { D.financas.lancamentos = D.financas.lancamentos.filter((x) => x !== l); } : null,
+  });
+}
+
+function abrirLimites() {
+  formModal({
+    titulo: '⚙️ Limites mensais por categoria',
+    intro: 'Defina quanto quer gastar no máximo por mês em cada categoria. Deixe em branco para não ter limite.',
+    campos: CATEGORIAS_DESPESA.map((c) => ({ name: c, label: c, type: 'number', step: '0.01', min: 0, placeholder: 'sem limite' })),
+    valores: D.financas.limites,
+    aoSalvar: (d) => {
+      const lim = {};
+      Object.entries(d).forEach(([k, v]) => { if (v > 0) lim[k] = v; });
+      D.financas.limites = lim;
+    },
+  });
+}
+
+function abrirCaixinha(c) {
+  formModal({
+    titulo: c ? 'Editar caixinha' : '🐷 Nova caixinha',
+    campos: [
+      { name: 'nome', label: 'Nome', required: true, placeholder: 'Ex.: Reserva de emergência' },
+      { name: 'icone', label: 'Emoji', maxlength: 8, padrao: '🐷' },
+      { name: 'alvo', label: 'Quanto quer juntar (R$)', type: 'number', step: '0.01', min: 0, required: true },
+      { name: 'atual', label: 'Quanto já tem (R$)', type: 'number', step: '0.01', min: 0, padrao: 0 },
+      { name: 'prazo', label: 'Prazo', type: 'date' },
+    ],
+    valores: c || {},
+    aoSalvar: (d) => {
+      const obj = { ...d, alvo: d.alvo || 0, atual: d.atual || 0 };
+      if (c) Object.assign(c, obj); else D.financas.caixinhas.push({ id: uid(), ...obj });
+    },
+    aoExcluir: c ? () => { D.financas.caixinhas = D.financas.caixinhas.filter((x) => x !== c); } : null,
+  });
+}
+
+function abrirDeposito(c) {
+  formModal({
+    titulo: `${esc(c.icone || '🐷')} ${esc(c.nome)}`,
+    intro: `Saldo atual: <strong>${fmtDinheiro(c.atual)}</strong>`,
+    botao: 'Confirmar',
+    campos: [
+      { name: 'operacao', label: 'Operação', type: 'select', options: [{ value: 'dep', label: '➕ Depositar' }, { value: 'ret', label: '➖ Retirar' }] },
+      { name: 'valor', label: 'Valor (R$)', type: 'number', step: '0.01', min: 0, required: true },
+    ],
+    aoSalvar: (d) => {
+      if (!(d.valor > 0)) { toast('Informe um valor'); return false; }
+      const antes = pct(c.atual, c.alvo);
+      c.atual = Math.max(0, (Number(c.atual) || 0) + (d.operacao === 'ret' ? -d.valor : d.valor));
+      if (antes < 100 && pct(c.atual, c.alvo) >= 100) setTimeout(() => toast(`🎉 Caixinha “${esc(c.nome)}” completa!`));
+    },
+  });
+}
+
+function abrirItemLista(lista, item) {
+  const cfg = LISTAS[lista];
+  formModal({
+    titulo: item ? 'Editar' : `Adicionar ${cfg.item}`,
+    campos: [
+      { name: 'titulo', label: cfg.campoTitulo, required: true, full: true },
+      { name: 'sub', label: cfg.campoSub, full: true },
+      { name: 'status', label: 'Status', type: 'select', options: cfg.status.map(([v, r]) => ({ value: v, label: r })) },
+      { name: 'data', label: 'Data de conclusão', type: 'date', mostrarSe: { campo: 'status', valores: ['concluido'] } },
+      { name: 'nota', label: 'Avaliação', type: 'estrelas', full: true },
+      { name: 'comentario', label: 'Comentário', type: 'textarea', full: true, rows: 2 },
+    ],
+    valores: item || {},
+    aoSalvar: (d) => {
+      if (d.status === 'concluido' && !d.data) d.data = hojeISO();
+      if (item) Object.assign(item, d); else D.listas[lista].push({ id: uid(), ...d });
+    },
+    aoExcluir: item ? () => { D.listas[lista] = D.listas[lista].filter((x) => x !== item); } : null,
+  });
+}
+
+function abrirDesejo(d, areaId) {
+  formModal({
+    titulo: d ? 'Editar sonho' : '🌈 Novo sonho',
+    campos: [
+      { name: 'texto', label: 'Sonho ou experiência', required: true, full: true, placeholder: 'Ex.: Ver a aurora boreal' },
+      { name: 'areaId', label: 'Área da vida', type: 'area', opcional: true, padrao: areaId || '' },
+      { name: 'feito', label: 'Já realizei! 🎉', type: 'checkbox' },
+      { name: 'dataFeito', label: 'Quando realizou', type: 'date', mostrarSe: { campo: 'feito', valores: ['on'] } },
+    ],
+    valores: d || {},
+    aoSalvar: (x) => {
+      if (x.feito && !x.dataFeito) x.dataFeito = hojeISO();
+      if (!x.feito) x.dataFeito = '';
+      if (d) Object.assign(d, x); else D.desejos.push({ id: uid(), ...x });
+    },
+    aoExcluir: d ? () => { D.desejos = D.desejos.filter((y) => y !== d); } : null,
+  });
+}
+
+function abrirDiario(e, dia) {
+  formModal({
+    titulo: e ? 'Editar registro' : '📔 Novo registro',
+    campos: [
+      { name: 'data', label: 'Data', type: 'date', required: true, padrao: dia || hojeISO() },
+      { name: 'humor', label: 'Como você está?', type: 'humor', full: true },
+      { name: 'texto', label: 'Escreva livremente', type: 'textarea', full: true, rows: 6, maxlength: 10000 },
+      { name: 'gratidao', label: 'Algo pelo qual agradeço hoje 🙏', type: 'textarea', full: true, rows: 2 },
+    ],
+    valores: e || {},
+    aoSalvar: (d) => { if (e) Object.assign(e, d); else D.diario.push({ id: uid(), ...d }); },
+    aoExcluir: e ? () => { D.diario = D.diario.filter((x) => x !== e); } : null,
+  });
+}
+
+function abrirArea(a) {
+  formModal({
+    titulo: 'Editar área',
+    campos: [
+      { name: 'nome', label: 'Nome', required: true, full: true },
+      { name: 'icone', label: 'Emoji', maxlength: 8, required: true },
+      { name: 'cor', label: 'Cor', type: 'color' },
+    ],
+    valores: a,
+    aoSalvar: (d) => { Object.assign(a, d); },
+  });
+}
+
+function boasVindas() {
+  formModal({
+    titulo: '🌸 Boas-vindas ao seu 2027!',
+    intro: 'Este é o seu espaço para organizar todas as áreas da vida: metas, hábitos, conquistas e muito mais. Vamos começar?',
+    botao: 'Começar ✨',
+    campos: [
+      { name: 'nome', label: 'Seu nome ou apelido', maxlength: 60 },
+      { name: 'palavra', label: 'Palavra do ano (opcional)', placeholder: 'Ex.: Constância', maxlength: 40 },
+      { name: 'paleta', label: 'Cor do tema', type: 'select', options: [{ value: 'lilas', label: '💜 Lilás' }, { value: 'rosa', label: '🩷 Rosa bebê' }] },
+      { name: 'exemplos', label: 'Começar com exemplos de metas, hábitos e objetivos (você pode editar ou apagar depois)', type: 'checkbox', full: true },
+    ],
+    valores: { paleta: D.config.paleta, exemplos: true },
+    aoSalvar: (d) => {
+      D.config.nome = d.nome;
+      if (d.palavra) D.config.palavra = d.palavra;
+      D.config.paleta = d.paleta;
+      if (d.exemplos) carregarExemplos();
+      aplicarTema();
+    },
+  });
+}
+
+/* ---------- Backup ---------- */
+function exportar() {
+  D.config.ultimoBackup = hojeISO();
+  salvar();
+  const blob = new Blob([JSON.stringify(D, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `meuano2027-backup-${hojeISO()}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  renderizar();
+  mostrarBackupTexto();
+}
+
+// Alguns lugares (como o visualizador do Claude) bloqueiam downloads.
+// Por isso o backup também aparece como texto para copiar e guardar.
+function mostrarBackupTexto() {
+  const texto = JSON.stringify(D);
+  const f = abrirModal('💾 Seu backup', `
+    <p class="muted" style="margin-bottom:12px">Se o arquivo não baixou, copie o texto abaixo e guarde em um lugar seguro (um e-mail para você mesmo, uma nota, o Google Drive…). Para restaurar, use <strong>Importar backup → Colar texto</strong>.</p>
+    <textarea id="backup-texto" rows="8" readonly style="font-family:monospace;font-size:12px">${esc(texto)}</textarea>
+    <div class="form-acoes" style="margin-top:12px"><span class="espaco"></span>
+      <button type="button" class="btn" data-fechar>Fechar</button>
+      <button type="button" class="btn primario" id="copiar-backup">📋 Copiar</button>
+    </div>`);
+  f.querySelector('#copiar-backup').addEventListener('click', () => {
+    const ta = f.querySelector('#backup-texto');
+    const ok = () => toast('📋 Backup copiado!');
+    try {
+      navigator.clipboard.writeText(texto).then(ok).catch(() => { ta.select(); toast('Texto selecionado: use Copiar do seu aparelho'); });
+    } catch { ta.select(); toast('Texto selecionado: use Copiar do seu aparelho'); }
+  });
+}
+
+async function restaurarDe(textoJSON) {
+  try {
+    const dados = JSON.parse(textoJSON);
+    if (!dados || !Array.isArray(dados.areas) || !dados.config) throw new Error('formato');
+    if (!(await confirmar('Importar este backup vai <strong>substituir</strong> todos os dados atuais deste navegador.', { botao: 'Importar' }))) return false;
+    D = mesclarPadrao(dadosPadrao(), dados);
+    D.config.boasVindas = true;
+    salvar();
+    aplicarTema();
+    renderizar();
+    toast('✅ Backup importado!');
+    return true;
+  } catch (e) {
+    console.error(e);
+    toast('⚠️ Backup inválido. Use um backup exportado por este site.');
+    return false;
+  }
+}
+
+function importar() {
+  const f = abrirModal('⬆️ Importar backup', `
+    <p class="muted" style="margin-bottom:12px">Escolha o arquivo .json do backup ou cole o texto copiado.</p>
+    <div class="pilha" style="gap:12px">
+      <label class="campo"><span>Arquivo de backup</span><input type="file" id="imp-arquivo" accept=".json,application/json"></label>
+      <label class="campo"><span>Ou cole o texto aqui</span><textarea id="imp-texto" rows="5" style="font-family:monospace;font-size:12px"></textarea></label>
+    </div>
+    <div class="form-acoes" style="margin-top:12px"><span class="espaco"></span>
+      <button type="button" class="btn" data-fechar>Cancelar</button>
+      <button type="button" class="btn primario" id="imp-ok">Importar</button>
+    </div>`);
+  f.querySelector('#imp-ok').addEventListener('click', async () => {
+    const arq = f.querySelector('#imp-arquivo').files[0];
+    const texto = arq ? await arq.text() : f.querySelector('#imp-texto').value.trim();
+    if (!texto) { toast('Escolha um arquivo ou cole o texto do backup'); return; }
+    if (await restaurarDe(texto)) fecharModal(f);
+  });
+}
+
+/* ---------- Ações (cliques) ---------- */
+const achar = (lista, id) => lista.find((x) => x.id === id);
+
+const ACOES = {
+  menu: () => $('#app').classList.toggle('menu-aberto'),
+  alternarModo: () => {
+    const escuro = document.documentElement.dataset.escuro === '1';
+    D.config.modo = escuro ? 'claro' : 'escuro';
+    salvar(); aplicarTema();
+    if (location.hash.includes('config')) renderizar();
+  },
+  estado: (ds) => { estado[ds.chave] = ds.valor; renderizar(); },
+  irTrimestres: () => { estado.metasAba = 'tri'; location.hash = '#metas'; renderizar(); },
+
+  novaMeta: (ds) => abrirMeta(null, ds.area),
+  editarMeta: (ds) => abrirMeta(achar(D.metas, ds.id)),
+  metaMais: (ds) => ajustarMeta(ds.id, 1),
+  metaMenos: (ds) => ajustarMeta(ds.id, -1),
+
+  novoObjetivo: (ds) => abrirObjetivo(null, Number(ds.tri) || null),
+  editarObjetivo: (ds) => abrirObjetivo(achar(D.objetivos, ds.id)),
+
+  novoHabito: (ds) => abrirHabito(null, ds.area),
+  editarHabito: (ds) => abrirHabito(achar(D.habitos, ds.id)),
+  toggleHabito: (ds) => {
+    const h = achar(D.habitos, ds.id);
+    if (!h || ds.dia > hojeISO()) return;
+    if (h.registros[ds.dia]) delete h.registros[ds.dia]; else h.registros[ds.dia] = true;
+    mudou();
+    const seq = sequenciaAtual(h);
+    if (h.registros[ds.dia] && [7, 21, 30, 66, 100, 365].includes(seq)) toast(`🔥 ${seq} dias seguidos de “${esc(h.nome)}”!`);
+  },
+  habMes: (ds) => {
+    const d = Number(ds.delta);
+    const agora = new Date();
+    if (!d) estado.habMes = { ano: agora.getFullYear(), mes: agora.getMonth() };
+    else {
+      const x = new Date(estado.habMes.ano, estado.habMes.mes + d, 1);
+      estado.habMes = { ano: x.getFullYear(), mes: x.getMonth() };
+    }
+    renderizar();
+    rolarParaHoje();
+  },
+
+  novoFeito: (ds) => abrirFeito(null, ds.area),
+  editarFeito: (ds) => abrirFeito(achar(D.feitos, ds.id)),
+
+  removerFoco: (ds) => { D.foco = D.foco.filter((f) => f.id !== ds.id); mudou(); },
+
+  novaRevisao: (ds) => abrirRevisao(ds.tipo),
+  editarRevisao: (ds) => abrirRevisao(ds.tipo, achar(D.revisoes[ds.tipo], ds.id)),
+
+  finMes: (ds) => { estado.finMes = Math.min(12, Math.max(1, (estado.finMes || mesAtualAno()) + Number(ds.delta))); renderizar(); },
+  novoLancamento: () => abrirLancamento(),
+  editarLancamento: (ds) => abrirLancamento(achar(D.financas.lancamentos, ds.id)),
+  editarLimites: () => abrirLimites(),
+  novaCaixinha: () => abrirCaixinha(),
+  editarCaixinha: (ds) => abrirCaixinha(achar(D.financas.caixinhas, ds.id)),
+  depositar: (ds) => abrirDeposito(achar(D.financas.caixinhas, ds.id)),
+
+  novoItemLista: (ds) => abrirItemLista(ds.lista),
+  editarItemLista: (ds) => abrirItemLista(ds.lista, achar(D.listas[ds.lista], ds.id)),
+
+  novoDesejo: (ds) => abrirDesejo(null, ds.area),
+  editarDesejo: (ds) => abrirDesejo(achar(D.desejos, ds.id)),
+  desejoAoMural: (ds) => {
+    const d = achar(D.desejos, ds.id);
+    abrirFeito(null, d.areaId, { titulo: `Realizei: ${d.texto}`, data: d.dataFeito || hojeISO(), areaId: d.areaId });
+    d.noMural = true;
+    salvar();
+  },
+
+  novoDiario: (ds) => abrirDiario(null, ds.dia),
+  editarDiario: (ds) => abrirDiario(achar(D.diario, ds.id)),
+  diarioDia: (ds) => {
+    const e = D.diario.find((x) => x.data === ds.dia);
+    abrirDiario(e || null, ds.dia);
+  },
+
+  editarArea: (ds) => abrirArea(achar(D.areas, ds.id)),
+
+  exportar: () => exportar(),
+  importar: () => importar(),
+  exemplos: async () => {
+    if (!(await confirmar('Isso vai <strong>substituir</strong> metas, objetivos, hábitos, caixinhas, sonhos e feitos pelos exemplos. Suas configurações são mantidas.', { botao: 'Carregar exemplos' }))) return;
+    carregarExemplos();
+    mudou();
+    toast('✨ Exemplos carregados!');
+  },
+  resetar: async () => {
+    if (!(await confirmar('Todos os seus dados serão apagados deste navegador. Recomendamos exportar um backup antes.', { botao: 'Apagar tudo' }))) return;
+    D = dadosPadrao();
+    D.config.boasVindas = true;
+    salvar();
+    aplicarTema();
+    location.hash = '#inicio';
+    renderizar();
+    toast('Tudo limpo. Um novo começo 🌱');
+  },
+};
+
+function ajustarMeta(id, sinal) {
+  const m = achar(D.metas, id);
+  if (!m) return;
+  const antes = progressoMeta(m);
+  const passo = Number(m.passo) || 1;
+  m.atual = Math.max(0, Math.round(((Number(m.atual) || 0) + sinal * passo) * 100) / 100);
+  mudou();
+  celebrarSeConcluiu(m, antes);
+}
+
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-acao]');
+  if (!el || el.disabled) return;
+  const fn = ACOES[el.dataset.acao];
+  if (!fn) return;
+  if (el.tagName === 'A' && el.dataset.acao !== 'irTrimestres') return fn(el.dataset, el, e);
+  e.preventDefault();
+  fn(el.dataset, el, e);
+});
+
+/* ---------- Mudanças (checkbox, selects, textareas) ---------- */
+const MUDANCAS = {
+  foco: (el) => { const f = achar(D.foco, el.dataset.id); if (f) { f.feito = el.checked; mudou(); } },
+  objetivo: (el) => { const o = achar(D.objetivos, el.dataset.id); if (o) { o.feito = el.checked; mudou(); if (o.feito) toast('✅ Objetivo concluído!'); } },
+  etapa: (el) => {
+    const m = achar(D.metas, el.dataset.meta);
+    const et = m && m.etapas.find((x) => x.id === el.dataset.etapa);
+    if (!et) return;
+    const antes = progressoMeta(m);
+    et.feito = el.checked;
+    mudou();
+    celebrarSeConcluiu(m, antes);
+  },
+  metaSimples: (el) => {
+    const m = achar(D.metas, el.dataset.id);
+    if (!m) return;
+    const antes = progressoMeta(m);
+    m.concluida = el.checked;
+    mudou();
+    celebrarSeConcluiu(m, antes);
+  },
+  notaArea: (el) => {
+    const a = achar(D.areas, el.dataset.id);
+    if (!a) return;
+    if (el.value) a.notas[el.dataset.mes] = Number(el.value); else delete a.notas[el.dataset.mes];
+    mudou();
+  },
+  visaoArea: (el) => {
+    const a = achar(D.areas, el.dataset.id);
+    if (a) { a.visao = el.value.trim(); salvar(); toast('💭 Visão salva'); }
+  },
+  desejo: (el) => {
+    const d = achar(D.desejos, el.dataset.id);
+    if (!d) return;
+    d.feito = el.checked;
+    d.dataFeito = el.checked ? hojeISO() : '';
+    mudou();
+    if (d.feito) toast('🌈 Sonho realizado!', { texto: 'Levar ao mural', fn: () => ACOES.desejoAoMural({ id: d.id }) });
+  },
+  statusItem: (el) => {
+    const i = achar(D.listas[el.dataset.lista], el.dataset.id);
+    if (!i) return;
+    i.status = el.value;
+    if (i.status === 'concluido' && !i.data) i.data = hojeISO();
+    mudou();
+  },
+};
+
+document.addEventListener('change', (e) => {
+  const el = e.target.closest('[data-mudar]');
+  if (el && MUDANCAS[el.dataset.mudar]) MUDANCAS[el.dataset.mudar](el);
+});
+
+/* ---------- Formulários inline ---------- */
+const FORMS = {
+  foco: (form) => {
+    const texto = form.elements.texto.value.trim();
+    if (!texto) return;
+    D.foco.push({ id: uid(), texto, data: hojeISO(), feito: false });
+    // mantém só os últimos 60 dias
+    const limite = dataISO(addDias(new Date(), -60));
+    D.foco = D.foco.filter((f) => f.data >= limite);
+    mudou();
+    setTimeout(() => $('[data-form="foco"] input')?.focus());
+  },
+  config: (form) => {
+    const el = form.elements;
+    Object.assign(D.config, {
+      nome: el.nome.value.trim(),
+      palavra: el.palavra.value.trim(),
+      visao: el.visao.value.trim(),
+      metaLivros: Math.max(0, Number(el.metaLivros.value) || 0),
+      modo: el.modo.value,
+      paleta: form.querySelector('input[name="paleta"]:checked')?.value || 'lilas',
+    });
+    salvar();
+    aplicarTema();
+    renderizar();
+    toast('✅ Configurações salvas');
+  },
+};
+
+document.addEventListener('submit', (e) => {
+  const form = e.target.closest('form[data-form]');
+  if (!form) return;
+  e.preventDefault();
+  FORMS[form.dataset.form]?.(form);
+});
+
+// Prévia da paleta ao escolher nas configurações
+document.addEventListener('input', (e) => {
+  if (e.target.name === 'paleta' && e.target.closest('[data-form="config"]')) {
+    document.documentElement.dataset.paleta = e.target.value;
+  }
+});
+
+/* ---------- Início ---------- */
+carregar();
+aplicarTema();
+montarNav();
+renderizar();
+if (!D.config.boasVindas) {
+  D.config.boasVindas = true;
+  salvar();
+  boasVindas();
+}
+
+if ('serviceWorker' in navigator && location.protocol.startsWith('http') && !location.hostname.endsWith('claude.ai') && !location.hostname.endsWith('claudeusercontent.com')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+
+</script>
+</body>
+</html>

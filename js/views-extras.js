@@ -120,7 +120,7 @@ VIEWS.listas = () => {
     ${abas('listaAba', Object.entries(LISTAS).map(([k, v]) => [k, v.rotulo]))}
     ${aba === 'livros' && metaLivros ? `<div class="card" style="margin-bottom:18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
         <div class="anel mini" style="--p:${pct(concluidosAno, metaLivros)}"><span>${pct(concluidosAno, metaLivros)}%</span></div>
-        <div style="flex:1;min-width:180px"><h3>Desafio de leitura ${ANO}</h3><p class="muted">${concluidosAno} de ${metaLivros} livros lidos. <a href="#/config">Alterar meta</a></p></div>
+        <div style="flex:1;min-width:180px"><h3>Desafio de leitura ${ANO}</h3><p class="muted">${concluidosAno} de ${metaLivros} livros lidos. <a href="#config">Alterar meta</a></p></div>
       </div>` : `<p class="muted" style="margin-bottom:16px">${concluidosAno} concluído(s) em ${ANO}.</p>`}
     <section class="kanban">
       ${cfg.status.map(([s, rotulo]) => {
@@ -256,7 +256,6 @@ VIEWS.config = () => {
             <button class="btn primario" data-acao="exportar">⬇️ Exportar backup</button>
             <button class="btn" data-acao="importar">⬆️ Importar backup</button>
           </div>
-          <input type="file" id="arquivo-import" accept="application/json,.json" hidden>
         </div>
         <div class="card">
           <h2 style="margin-bottom:8px">🧪 Outros</h2>

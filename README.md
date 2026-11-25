@@ -24,7 +24,8 @@ Tem tema **lilás** ou **rosa bebê**, modo claro e escuro, e funciona no comput
 
 Não precisa instalar nada: é HTML, CSS e JavaScript puro.
 
-- **No computador:** abra o arquivo `index.html` no navegador.
+- **Mais fácil:** baixe o arquivo `meuano-2027.html` (tudo em um arquivo só) e abra no navegador, no computador ou no celular.
+- **No computador, com a pasta do projeto:** abra o arquivo `index.html` no navegador.
 - **Publicado na internet (GitHub Pages):** no GitHub, vá em *Settings → Pages*, escolha a branch e a pasta `/ (root)` e salve. O site fica em `https://<seu-usuario>.github.io/meuano/`.
 - **No celular:** abra o endereço publicado e use “Adicionar à tela de início” para usar como app.
 
@@ -32,8 +33,8 @@ Não precisa instalar nada: é HTML, CSS e JavaScript puro.
 
 Tudo fica salvo **apenas no navegador** (localStorage), então nada vai para nenhum servidor.
 
-- Use **Configurações → Exportar backup** com frequência. O site lembra você quando passar de 30 dias sem backup.
-- Para levar os dados para outro aparelho, exporte em um e use **Importar backup** no outro.
+- Use **Configurações → Exportar backup** com frequência. Se o arquivo não baixar, o backup aparece como texto para copiar. O site lembra você quando passar de 30 dias sem backup.
+- Para levar os dados para outro aparelho, exporte em um e use **Importar backup** no outro (escolhendo o arquivo ou colando o texto).
 - Limpar os dados do navegador apaga as informações, por isso o backup é importante.
 
 ## Estrutura
@@ -47,4 +48,8 @@ js/views.js           início, áreas, metas, hábitos, feitos, revisões e retr
 js/views-extras.js    finanças, listas, lista da vida, diário e configurações
 js/app.js             navegação, ações e formulários
 sw.js                 funcionamento offline
+meuano-2027.html      versão em arquivo único (gerada)
+ferramentas/gerar-arquivo-unico.py   gera o meuano-2027.html
 ```
+
+Depois de mudar qualquer arquivo, rode `python3 ferramentas/gerar-arquivo-unico.py` para atualizar o `meuano-2027.html`.

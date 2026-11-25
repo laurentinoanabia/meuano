@@ -36,7 +36,7 @@ VIEWS.inicio = () => {
 
   const anoTexto = pa.antes
     ? `Faltam <strong>${pa.faltam}</strong> ${pa.faltam === 1 ? 'dia' : 'dias'} para 2027 ✨`
-    : pa.depois ? '2027 concluído 🎉 Veja sua <a href="#/retrospectiva">retrospectiva</a>'
+    : pa.depois ? '2027 concluído 🎉 Veja sua <a href="#retrospectiva">retrospectiva</a>'
     : `Dia <strong>${pa.dia}</strong> de ${pa.total} · semana ${pa.semana}`;
 
   const temDados = metas.length || D.feitos.length || D.habitos.length;
@@ -51,7 +51,7 @@ VIEWS.inicio = () => {
     <div class="hero-texto">
       <p class="hero-saudacao">${saudacao()}${c.nome ? `, ${esc(c.nome)}` : ''} 💜</p>
       <h1>Meu Ano <span class="destaque">2027</span></h1>
-      ${c.palavra ? `<p class="palavra">Palavra do ano: <strong>${esc(c.palavra)}</strong></p>` : `<p class="palavra muted">Escolha sua palavra do ano em <a href="#/config">Configurações</a>.</p>`}
+      ${c.palavra ? `<p class="palavra">Palavra do ano: <strong>${esc(c.palavra)}</strong></p>` : `<p class="palavra muted">Escolha sua palavra do ano em <a href="#config">Configurações</a>.</p>`}
       ${c.visao ? `<blockquote>${esc(c.visao)}</blockquote>` : ''}
     </div>
     <div class="hero-ano">
@@ -83,7 +83,7 @@ VIEWS.inicio = () => {
     </div>
 
     <div class="card">
-      <div class="card-topo"><h2>🔁 Hábitos de hoje</h2><a href="#/habitos" class="pequeno">ver todos</a></div>
+      <div class="card-topo"><h2>🔁 Hábitos de hoje</h2><a href="#habitos" class="pequeno">ver todos</a></div>
       ${D.habitos.length ? `<div class="pilha" style="gap:8px">${D.habitos.map((h) => botaoHabitoHoje(h, hoje)).join('')}</div>`
         : vazio('🌱', 'Nenhum hábito ainda.', '<button class="btn suave mini" data-acao="novoHabito">Criar hábito</button>')}
     </div>
@@ -91,12 +91,12 @@ VIEWS.inicio = () => {
 
   <section class="grid-2 secao">
     <div class="card centro">
-      <div class="card-topo"><h2>🌸 Roda da vida</h2><a href="#/areas" class="pequeno">ver áreas</a></div>
+      <div class="card-topo"><h2>🌸 Roda da vida</h2><a href="#areas" class="pequeno">ver áreas</a></div>
       ${D.areas.some((a) => notaAtual(a)) ? radarSVG([{ classe: 'partida', valor: notaPartida }, { classe: 'atual', valor: notaAtual }]) + legendaRadar()
-        : vazio('🎡', 'Dê uma nota de 1 a 10 para cada área da sua vida.', '<a class="btn suave mini" href="#/areas">Avaliar áreas</a>')}
+        : vazio('🎡', 'Dê uma nota de 1 a 10 para cada área da sua vida.', '<a class="btn suave mini" href="#areas">Avaliar áreas</a>')}
     </div>
     <div class="card">
-      <div class="card-topo"><h2>🎯 Metas em andamento</h2><a href="#/metas" class="pequeno">ver metas</a></div>
+      <div class="card-topo"><h2>🎯 Metas em andamento</h2><a href="#metas" class="pequeno">ver metas</a></div>
       ${emAndamento.length ? emAndamento.map((m) => {
         const a = area(m.areaId), p = progressoMeta(m);
         return `<div class="linha-item"><span class="area-icone" style="--cor:${a.cor};width:38px;height:38px;font-size:1.1rem;border-radius:12px">${a.icone}</span>
@@ -107,7 +107,7 @@ VIEWS.inicio = () => {
 
   <section class="grid-2 secao">
     <div class="card">
-      <div class="card-topo"><h2>🗓️ Objetivos do ${tri}º trimestre</h2><a href="#/metas" data-acao="irTrimestres" class="pequeno">ver trimestres</a></div>
+      <div class="card-topo"><h2>🗓️ Objetivos do ${tri}º trimestre</h2><a href="#metas" data-acao="irTrimestres" class="pequeno">ver trimestres</a></div>
       ${objsTri.length ? `<ul class="lista">${objsTri.map(itemObjetivo).join('')}</ul>`
         : vazio('🗓️', 'Nada planejado para este trimestre.', `<button class="btn suave mini" data-acao="novoObjetivo" data-tri="${tri}">Adicionar objetivo</button>`)}
     </div>
@@ -161,7 +161,7 @@ VIEWS.areas = () => {
         ${ordenadas.map((a) => {
           const n = notaAtual(a), p0 = notaPartida(a);
           const dif = n && p0 && n !== p0 ? ` <span class="pequeno" style="color:${n > p0 ? 'var(--ok)' : 'var(--perigo)'}">${n > p0 ? '▲' : '▼'} ${Math.abs(n - p0)}</span>` : '';
-          return `<div class="linha"><a href="#/area/${a.id}" style="color:var(--text);text-decoration:none;font-weight:700" class="truncar">${a.icone} ${esc(a.nome)}</a><span class="num"><strong>${n || '–'}</strong>/10${dif}</span>${barra(n * 10, a.cor)}</div>`;
+          return `<div class="linha"><a href="#area-${a.id}" style="color:var(--text);text-decoration:none;font-weight:700" class="truncar">${a.icone} ${esc(a.nome)}</a><span class="num"><strong>${n || '–'}</strong>/10${dif}</span>${barra(n * 10, a.cor)}</div>`;
         }).join('')}
       </div>
     </div>
@@ -173,7 +173,7 @@ VIEWS.areas = () => {
       const habitos = D.habitos.filter((h) => h.areaId === a.id).length;
       const feitos = D.feitos.filter((f) => f.areaId === a.id).length;
       const n = notaAtual(a);
-      return `<a class="card area-card" href="#/area/${a.id}" style="--cor:${a.cor}">
+      return `<a class="card area-card" href="#area-${a.id}" style="--cor:${a.cor}">
         <div class="area-topo"><span class="area-icone">${a.icone}</span><span class="nota-grande">${n || '–'}<small>/10</small></span></div>
         <h3>${esc(a.nome)}</h3>
         ${a.visao ? `<p class="muted pequeno" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${esc(a.visao)}</p>` : '<p class="muted pequeno">Toque para escrever sua visão para esta área.</p>'}
@@ -186,7 +186,7 @@ VIEWS.areas = () => {
 
 VIEWS.area = (id) => {
   const a = D.areas.find((x) => x.id === id);
-  if (!a) return vazio('🤔', 'Área não encontrada.', '<a class="btn" href="#/areas">Voltar</a>');
+  if (!a) return vazio('🤔', 'Área não encontrada.', '<a class="btn" href="#areas">Voltar</a>');
   const metas = D.metas.filter((m) => m.areaId === a.id);
   const habitos = D.habitos.filter((h) => h.areaId === a.id);
   const feitos = D.feitos.filter((f) => f.areaId === a.id).sort((x, y) => y.data.localeCompare(x.data));
@@ -195,7 +195,7 @@ VIEWS.area = (id) => {
   const hoje = hojeISO();
 
   return `
-  <a href="#/areas" class="voltar">← Áreas da vida</a>
+  <a href="#areas" class="voltar">← Áreas da vida</a>
   <div class="area-cab" style="--cor:${a.cor}">
     <span class="area-icone">${a.icone}</span>
     <div style="flex:1;min-width:200px"><h1>${esc(a.nome)}</h1><p class="muted">Nota atual: <strong>${notaAtual(a) || '–'}</strong>/10 · ponto de partida: ${notaPartida(a) || '–'}</p></div>
@@ -498,7 +498,6 @@ VIEWS.retrospectiva = () => {
   const pa = progressoAno();
 
   return `
-    <div class="acoes" style="justify-content:flex-end;margin-bottom:12px"><button class="btn" data-acao="imprimir">🖨 Imprimir / salvar PDF</button></div>
     <section class="card hero retro-hero" style="display:block">
       <p class="hero-saudacao">${pa.depois ? 'Que ano!' : pa.antes ? 'Uma prévia do que vem por aí' : `Até agora, ${pa.pct}% do ano já foi vivido`}</p>
       <h1>Retrospectiva <span class="destaque">${ANO}</span></h1>
