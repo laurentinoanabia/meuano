@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR" data-paleta="lilas" data-escuro="0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meu Ano 2027</title>
+  <meta name="description" content="Organização pessoal para 2027: áreas da vida, metas, hábitos, feitos e muito mais.">
+  <meta name="theme-color" content="#b39ae6">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <button class="icon-btn" data-acao="menu" aria-label="Abrir menu">☰</button>
+      <a href="#/inicio" class="topbar-marca">Meu Ano <strong>2027</strong></a>
+      <button class="icon-btn" data-acao="alternarModo" aria-label="Alternar modo claro/escuro">🌙</button>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <a href="#/inicio" class="marca">
+        <span class="marca-logo">🌸</span>
+        <span>Meu Ano <strong>2027</strong></span>
+      </a>
+      <nav id="nav"></nav>
+      <div class="sidebar-rodape">
+        <button class="btn mini largo" data-acao="alternarModo">🌙 Claro / escuro</button>
+      </div>
+    </aside>
+    <div class="sidebar-fundo" data-acao="menu"></div>
+
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+
+  <div id="modais"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/views-extras.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

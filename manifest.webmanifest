@@ -1,0 +1,14 @@
+{
+  "name": "Meu Ano 2027",
+  "short_name": "Meu Ano",
+  "description": "Organização pessoal para 2027: áreas da vida, metas, hábitos e feitos.",
+  "start_url": "./#/inicio",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3fd",
+  "theme_color": "#b39ae6",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
